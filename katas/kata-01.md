@@ -1,4 +1,4 @@
-# Qwik Kata 1 - Getting started
+# Kata 1 - Getting started
 
 The purpose of this kata is to get a basic environment set up and the first piece of user interface in place. It is also about getting used to working in a kata way. The difficulty will ramp up soon enough.
 
