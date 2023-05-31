@@ -22,12 +22,6 @@ To be able to complete the katas, you need the following:
 * [Node.js](https://nodejs.org/en/)
 * [Git](https://git-scm.com/) - Optional but it is a good idea to version your work so you can see what was done and why
 
-## Resources
-
-* [Web Audio documentation at MDN](https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API)
-* [Web Audio API: Why Compose When You Can Code?](https://www.toptal.com/web/web-audio-api-tutorial)
-* [Introduction to the Web Audio API at ui.dev](https://ui.dev/web-audio-api)
-
 ## Credits
 
 The kata format has been adapted from [red-gate/web-kata](https://github.com/red-gate/web-kata).
