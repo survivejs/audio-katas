@@ -1,4 +1,4 @@
-import { draggable } from "dragjs";
+import { draggable } from "../../utils/draggable";
 
 console.log("hello daw");
 
