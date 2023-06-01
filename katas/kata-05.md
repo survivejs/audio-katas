@@ -1,19 +1,22 @@
-# Kata 5 - Sequencing
+# Kata 5 - Music sequencing
 
-The purpose of this kata is ...
+The purpose of this kata is to get familiar with the idea of [music sequencing](https://en.wikipedia.org/wiki/Music_sequencer) and its impact on music production.
 
 ## Learning aims
 
-TODO:
+The minimal target of this kata is to understand the basic ideas behind sequencing:
 
-* foo
-* bar
+* Setting up a minimal sequencer to allow definition of simple songs manually
+* Understanding different forms of sequencing
 
 ## Task
 
 Complete the following:
 
-1. TODO
+1. Set up a window with a user interface that contains rows of toggleable buttons. Each row represents a series of steps and each column represents a note within the step. When the button is enabled, a note should be played. When disabled, nothing should happen.
+2. Optional - Allow setting up multiple tracks. For example, you could associate a sequencer window to a specific instrument and allow creation of multiple sequencer windows to model the feature.
+3. Optional - Match the four oscillators of the original 8-bit Nintendo and allow composing using them
+4. Optional - Allow playback of notes and play some legendary tune (Mario, Zelda, ...) through your system. To do this, you might need to implement some form of parser depending on the notation (pun intended).
 
 ## Reference
 
@@ -45,6 +48,7 @@ Complete the following:
 ## Artists
 
 * [Kraftwerk](https://en.m.wikipedia.org/wiki/Kraftwerk)
+* [Daft Punk](https://en.wikipedia.org/wiki/Daft_Punk)
 * [Brian Eno](https://en.m.wikipedia.org/wiki/Brian_Eno)
 * [Jan Hammer](https://en.m.wikipedia.org/wiki/Jan_Hammer)
 * [Herbie Hancock](https://en.m.wikipedia.org/wiki/Herbie_Hancock)

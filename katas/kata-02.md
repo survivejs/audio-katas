@@ -1,13 +1,14 @@
 # Kata 2 - Oscillation
 
-The purpose of this kata is ...
+The purpose of this kata is to implement simple [oscillators](https://en.wikipedia.org/wiki/Oscillation) as the first part of our DAW.
 
 ## Learning aims
 
-TODO:
+The minimal target of this kata is to get started with the Audio API and understand oscillators on a basic level:
 
-* foo
-* bar
+* Initializing Web Audio
+* Understanding what is an oscillator
+* Setting up an oscillator
 
 ## Task
 
@@ -19,6 +20,8 @@ Complete the following:
 4. Add a way to select between different waveform types
 5. Optional - Add a way to save oscillators
 6. Optional - Add a way to duplicate oscillators and play multiple at once
+7. Optional - Visualize oscillation in a separate window
+8. Optional - Implement a [theremin](https://en.wikipedia.org/wiki/Theremin) to allow adjusting two parameters of a waveform using a single control. A 2D slider is a good choice for this.
 
 ## Reference
 

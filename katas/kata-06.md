@@ -1,13 +1,13 @@
 # Kata 6 - Audio worklets
 
-The purpose of this kata is ...
+The purpose of this kata is to understand what is an [AudioWorklet](https://developer.mozilla.org/en-US/docs/Web/API/AudioWorklet) and how it complements Web Audio API.
 
 ## Learning aims
 
-TODO:
+The minimal target of this kata is to get used to writing audio worklets and understand their value for music production:
 
-* foo
-* bar
+* Setting up an AudioWorklet
+* Understanding the relationship between Web Audio API and AudioWorklets
 
 ## Task
 

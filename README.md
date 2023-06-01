@@ -8,9 +8,9 @@ The repository contains [katas](katas/) and [solutions](solutions/). Each kata c
 
 1. [Getting started](katas/kata-01.md) - [Solution](solutions/kata-01)
 2. [Oscillation](katas/kata-02.md) - [Solution](solutions/kata-02)
-3. [Keyboard](katas/kata-03.md) - [Solution](solutions/kata-03)
-4. [Sampling](katas/kata-04.md) - [Solution](solutions/kata-04)
-5. [Sequencing](katas/kata-05.md) - [Solution](solutions/kata-05)
+3. [Musical keyboard](katas/kata-03.md) - [Solution](solutions/kata-03)
+4. [Audio sampling](katas/kata-04.md) - [Solution](solutions/kata-04)
+5. [Music sequencing](katas/kata-05.md) - [Solution](solutions/kata-05)
 6. [Audio worklets](katas/kata-06.md) - [Solution](solutions/kata-06)
 7. [Graph editor](katas/kata-07.md) - [Solution](solutions/kata-07)
 
