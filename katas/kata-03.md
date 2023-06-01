@@ -17,11 +17,14 @@ Complete the following:
 1. Find a suitable premade keyboard component online and insert it to the DAW within a window of its own
 2. Research how notes are defined using Web Audio API and connect your oscillator with the keyboard so that it is possible to play it
 3. Refactor the implementation to use [Tone.js](https://tonejs.github.io/)
-4. Optional - Allow playing your musical keyboard with the keyboard of your machine
-5. Optional - Look up the [MIDI](https://en.wikipedia.org/wiki/MIDI) standard and consider how you might use it to expand the system with a physical device
+4. Optional - Figure out how to support playing multiple notes at once
+5. Optional - Allow playing your musical keyboard with the keyboard of your machine
+6. Optional - Look up the [MIDI](https://en.wikipedia.org/wiki/MIDI) standard and consider how you might use it to expand the system with a physical device
 
 ## Reference
 
+* [Piano example (css)](https://github.com/isbendiyarovanezrin/Piano)
+* [Complete piano example (codepen)](https://codepen.io/gabrielcarol/pen/rGeEbY)
 * [Notes, Scales and Modes in Music](https://deviantnoise.com/music-theory/notes-scales-modes/)
 * [Recreating legendary 8-bit games music with Web Audio API](https://codepen.io/gregh/post/recreating-legendary-8-bit-games-music-with-web-audio-api)
 * [Making Noise with Web Audio API](https://sparkbox.com/foundry/chiptune_style_browser_generated_music_using_tone.js) - 12 min video
