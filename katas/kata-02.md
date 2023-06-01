@@ -17,7 +17,7 @@ Complete the following:
 1. Add a window with controls to start and stop playback
 2. Attach a Web Audio based sine wave oscillator to the controls so that it plays when you click start and stops when you click stop
 3. Add controls to adjust primary parameters that define a waveform
-4. Add a way to select between different waveform types
+4. Add a way to select between a couple of different waveform types
 5. Optional - Add a window for displaying and debugging application state
 6. Optional - Add a way to save oscillators
 7. Optional - Add a way to duplicate oscillators and play multiple at once
