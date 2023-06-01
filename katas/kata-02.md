@@ -28,6 +28,7 @@ Complete the following:
 
 * [Nexus](https://nexus-js.github.io/ui/) - UI helpers for audio interfaces
 * [classList API](https://developer.mozilla.org/en-US/docs/Web/API/Element/classList)
+* [HTML range input](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/range)
 * [UTF media control symbols](https://en.wikipedia.org/wiki/Media_control_symbols)
 * [HTML button element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button)
 * [Oscillator examples](https://codepen.io/jonoliver/pen/NoawPv)

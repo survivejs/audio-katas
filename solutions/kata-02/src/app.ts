@@ -5,13 +5,14 @@ console.log("hello daw");
 type Element = {
   type: string;
   class?: string;
-  children: string | Element[];
+  children?: string | Element[];
   attributes?: Record<string, (() => void) | string>;
 };
 
 const $body = document.body;
-const initialState: { playbackState: "paused" | "playing" } = {
+const initialState: { playbackState: "paused" | "playing"; volume: number } = {
   playbackState: "paused",
+  volume: 50, // [0, 100]
 };
 const applicationState = new Proxy(initialState, {
   set(obj, prop, value) {
@@ -25,6 +26,9 @@ const applicationState = new Proxy(initialState, {
         audioContext.resume();
       }
     }
+    if (prop === "volume") {
+      gainNode.gain.value = value / 100;
+    }
 
     return Reflect.set(obj, prop, value);
   },
@@ -37,8 +41,9 @@ const oscillator = audioContext.createOscillator();
 oscillator.type = "sine";
 oscillator.frequency.value = 440; // Hz
 
+// Volume
 const gainNode = audioContext.createGain();
-gainNode.gain.value = 0.5; // Initial volume
+gainNode.gain.value = applicationState.volume / 100;
 
 oscillator.connect(gainNode);
 gainNode.connect(audioContext.destination);
@@ -68,21 +73,52 @@ createWindow({
   body: [
     {
       type: "div",
-      class: "flex flex-row gap-2",
+      class: "flex flex-col gap-2",
       children: [
         {
-          type: "button",
-          children: "⏵",
-          attributes: {
-            onclick: () => (applicationState.playbackState = "playing"),
-          },
+          type: "div",
+          class: "flex flex-row gap-2",
+          children: [
+            {
+              type: "button",
+              children: "⏵",
+              attributes: {
+                onclick() {
+                  applicationState.playbackState = "playing";
+                },
+              },
+            },
+            {
+              type: "button",
+              children: "⏸",
+              attributes: {
+                onclick() {
+                  applicationState.playbackState = "paused";
+                },
+              },
+            },
+          ],
         },
         {
-          type: "button",
-          children: "⏸",
-          attributes: {
-            onclick: () => (applicationState.playbackState = "paused"),
-          },
+          type: "label",
+          children: [
+            {
+              type: "span",
+              children: "Volume",
+            },
+            {
+              type: "input",
+              attributes: {
+                type: "range",
+                name: "volume",
+                min: "0",
+                max: "100",
+                oninput() {
+                  applicationState.volume = this.value;
+                },
+              },
+            },
+          ],
         },
       ],
     },
@@ -92,10 +128,10 @@ createWindow({
 // Make initial state visible in the UI
 Object.entries(initialState).map(([k, v]) => updateListeners(k, v));
 
-function updateListeners(prop: string, value: string) {
+function updateListeners(prop: string, value: number | string) {
   const $listeners = document.querySelectorAll(`[data-${String(prop)}]`);
 
-  $listeners.forEach(($listener) => ($listener.innerHTML = value));
+  $listeners.forEach(($listener) => ($listener.innerHTML = String(value)));
 }
 
 function createWindow({
@@ -160,7 +196,7 @@ function elementToDOM(element: Element) {
 
   if (typeof element.children === "string") {
     $element.innerHTML = element.children;
-  } else {
+  } else if (element.children) {
     $element.append(...elementsToDOM(element.children));
   }
 
