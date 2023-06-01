@@ -26,6 +26,9 @@ Complete the following:
 ## Reference
 
 * [Nexus](https://nexus-js.github.io/ui/) - UI helpers for audio interfaces
+* [classList API](https://developer.mozilla.org/en-US/docs/Web/API/Element/classList)
+* [UTF media control symbols](https://en.wikipedia.org/wiki/Media_control_symbols)
+* [HTML button element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button)
 * [Oscillator examples](https://codepen.io/jonoliver/pen/NoawPv)
 * [Web Audio API reference at MDN](https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API)
 * [Using the Web Audio API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
