@@ -17,9 +17,37 @@ const applicationState = new Proxy(initialState, {
   set(obj, prop, value) {
     updateListeners(String(prop), value);
 
+    if (prop === "playbackState") {
+      if (value === "paused") {
+        audioContext.suspend();
+      }
+      if (value === "playing") {
+        audioContext.resume();
+      }
+    }
+
     return Reflect.set(obj, prop, value);
   },
 });
+
+// Create audio graph
+const audioContext = new AudioContext();
+
+const oscillator = audioContext.createOscillator();
+oscillator.type = "sine";
+oscillator.frequency.value = 440; // Hz
+
+const gainNode = audioContext.createGain();
+gainNode.gain.value = 0.5; // Initial volume
+
+oscillator.connect(gainNode);
+gainNode.connect(audioContext.destination);
+
+// This can be run only once!
+oscillator.start();
+
+// Don't play anything initially. Maybe there is a better spot for this
+audioContext.suspend();
 
 createWindow({
   $parent: $body,
