@@ -1,4 +1,4 @@
-# Kata 7 - Graph editor
+# Kata 7 - Dataflow programming
 
 The purpose of this kata is explore how [dataflow programming](https://en.wikipedia.org/wiki/Dataflow_programming) can be used for audio creation.
 
