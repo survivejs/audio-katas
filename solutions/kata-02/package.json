@@ -1,0 +1,22 @@
+{
+  "name": "my-daw",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "parcel src/index.html",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Juho Vepsäläinen",
+  "license": "MIT",
+  "devDependencies": {
+    "parcel": "^2.9.1",
+    "postcss": "^8.4.24",
+    "prettier": "^2.8.8",
+    "tailwindcss": "^3.3.2"
+  },
+  "dependencies": {
+    "dragjs": "^0.13.3"
+  }
+}

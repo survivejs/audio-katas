@@ -27,6 +27,7 @@ Complete the following:
 
 * [Nexus](https://nexus-js.github.io/ui/) - UI helpers for audio interfaces
 * [Oscillator examples](https://codepen.io/jonoliver/pen/NoawPv)
+* [Web Audio API reference at MDN](https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API)
 * [Using the Web Audio API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
 * [Web Audio API: Why Compose When You Can Code?](https://www.toptal.com/web/web-audio-api-tutorial)
 * [Introduction to the Web Audio API at ui.dev](https://ui.dev/web-audio-api)
