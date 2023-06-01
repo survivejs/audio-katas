@@ -10,9 +10,30 @@ type Element = {
 };
 
 const $body = document.body;
+const initialState: { playbackState: "paused" | "playing" } = {
+  playbackState: "paused",
+};
+const applicationState = new Proxy(initialState, {
+  set(obj, prop, value) {
+    // TODO: Update listeners now
+    console.log(obj, prop, value);
+
+    return Reflect.set(obj, prop, value);
+  },
+});
 
 createWindow({
   $parent: $body,
+  // TODO: Remove right-5 after initial dragging
+  // klass: "right-5",
+  klass: "left-1/2",
+  title: "Debug",
+  body: [{ type: "div", children: "test" }],
+});
+
+createWindow({
+  $parent: $body,
+  klass: "left-5",
   title: "Playback",
   // https://en.wikipedia.org/wiki/Media_control_symbols
   body: [
@@ -24,14 +45,14 @@ createWindow({
           type: "button",
           children: "⏵",
           attributes: {
-            onclick: () => console.log("clicked play"),
+            onclick: () => (applicationState.playbackState = "playing"),
           },
         },
         {
           type: "button",
           children: "⏸",
           attributes: {
-            onclick: () => console.log("clicked pause"),
+            onclick: () => (applicationState.playbackState = "playing"),
           },
         },
       ],
@@ -43,13 +64,20 @@ function createWindow({
   $parent,
   title,
   body,
+  // reserved word in JS
+  klass,
 }: {
   $parent: HTMLElement;
   title: string;
   body: Element[];
+  klass?: string;
 }) {
   const $window = document.createElement("div");
   $window.classList.add("absolute", "border", "rounded-lg");
+
+  if (klass) {
+    $window.classList.add(...klass.split(" "));
+  }
 
   const $title = elementToDOM({
     type: "div",
