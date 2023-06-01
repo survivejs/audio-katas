@@ -24,4 +24,4 @@ To be able to complete the katas, you need the following:
 
 ## Credits
 
-The kata format has been adapted from [red-gate/web-kata](https://github.com/red-gate/web-kata).
+The kata format has been adapted from [red-gate/web-kata](https://github.com/red-gate/web-kata). Special thanks go to [Tero Parviainen](https://github.com/teropa) for helping to ideate the content.
