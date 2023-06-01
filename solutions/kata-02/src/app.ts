@@ -6,7 +6,7 @@ type Element = {
   type: string;
   class?: string;
   children: string | Element[];
-  attributes?: Record<string, () => void>;
+  attributes?: Record<string, (() => void) | string>;
 };
 
 const $body = document.body;
@@ -15,8 +15,7 @@ const initialState: { playbackState: "paused" | "playing" } = {
 };
 const applicationState = new Proxy(initialState, {
   set(obj, prop, value) {
-    // TODO: Update listeners now
-    console.log(obj, prop, value);
+    updateListeners(String(prop), value);
 
     return Reflect.set(obj, prop, value);
   },
@@ -28,7 +27,9 @@ createWindow({
   // klass: "right-5",
   klass: "left-1/2",
   title: "Debug",
-  body: [{ type: "div", children: "test" }],
+  body: [
+    { type: "div", children: "", attributes: { "data-playbackState": "" } },
+  ],
 });
 
 createWindow({
@@ -52,13 +53,22 @@ createWindow({
           type: "button",
           children: "⏸",
           attributes: {
-            onclick: () => (applicationState.playbackState = "playing"),
+            onclick: () => (applicationState.playbackState = "paused"),
           },
         },
       ],
     },
   ],
 });
+
+// Make initial state visible in the UI
+Object.entries(initialState).map(([k, v]) => updateListeners(k, v));
+
+function updateListeners(prop: string, value: string) {
+  const $listeners = document.querySelectorAll(`[data-${String(prop)}]`);
+
+  $listeners.forEach(($listener) => ($listener.innerHTML = value));
+}
 
 function createWindow({
   $parent,
@@ -111,7 +121,12 @@ function elementToDOM(element: Element) {
 
   if (element.attributes) {
     Object.entries(element.attributes).map(([k, v]) => {
-      $element[k] = v;
+      if (k.startsWith("on")) {
+        $element[k] = v;
+      } else {
+        // Trust that it's a string now since handlers are treated separately
+        $element.setAttribute(k, v as string);
+      }
     });
   }
 
