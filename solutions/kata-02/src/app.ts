@@ -70,6 +70,8 @@ createWindow({
   title: "Debug",
   body: [
     { type: "div", children: "", attributes: { "data-playbackState": "" } },
+    { type: "div", children: "", attributes: { "data-volume": "" } },
+    { type: "div", children: "", attributes: { "data-frequency": "" } },
   ],
 });
 
