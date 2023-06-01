@@ -4,7 +4,8 @@ console.log("hello daw");
 
 type Element = {
   type: string;
-  children: string;
+  class?: string;
+  children: string | Element[];
 };
 
 const $body = document.body;
@@ -15,12 +16,20 @@ createWindow({
   // https://en.wikipedia.org/wiki/Media_control_symbols
   body: [
     {
-      type: "button",
-      children: "⏵",
-    },
-    {
-      type: "button",
-      children: "⏸",
+      type: "div",
+      class: "flex flex-row gap-2",
+      children: [
+        {
+          type: "button",
+          children: "⏵",
+          // TODO: handler
+        },
+        {
+          type: "button",
+          children: "⏸",
+          // TODO: handler
+        },
+      ],
     },
   ],
 });
@@ -64,7 +73,16 @@ function elementsToDOM(elements: Element[]) {
 
 function elementToDOM(element: Element) {
   const $element = document.createElement(element.type);
-  $element.innerHTML = element.children;
+
+  if (element.class) {
+    $element.classList.add(...element.class.split(" "));
+  }
+
+  if (typeof element.children === "string") {
+    $element.innerHTML = element.children;
+  } else {
+    $element.append(...elementsToDOM(element.children));
+  }
 
   return $element;
 }
