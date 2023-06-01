@@ -46,20 +46,18 @@ function createWindow({
   const $window = document.createElement("div");
   $window.classList.add("absolute", "border", "rounded-lg");
 
-  const $title = document.createElement("div");
-  $title.classList.add(
-    "bg-slate-800",
-    "text-slate-200",
-    "rounded-t-lg",
-    "p-2",
-    "hover:cursor-pointer"
-  );
-  $title.innerHTML = title;
+  const $title = elementToDOM({
+    type: "div",
+    class: "bg-slate-800 text-slate-200 rounded-t-lg p-2 hover:cursor-pointer",
+    children: title,
+  });
   $window.appendChild($title);
 
-  const $body = document.createElement("div");
-  $body.classList.add("p-2");
-  $body.append(...elementsToDOM(body));
+  const $body = elementToDOM({
+    type: "div",
+    class: "p-2",
+    children: body,
+  });
   $window.appendChild($body);
 
   $parent.appendChild($window);
