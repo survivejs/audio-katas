@@ -34,6 +34,9 @@ const applicationState = new Proxy(initialState, {
     if (prop === "volume") {
       gainNode.gain.value = value / 100;
     }
+    if (prop === "frequency") {
+      oscillator.frequency.value = value;
+    }
 
     return Reflect.set(obj, prop, value);
   },
@@ -106,6 +109,7 @@ createWindow({
         },
         {
           type: "label",
+          class: "flex flex-row gap-2",
           children: [
             {
               type: "span",
@@ -118,8 +122,32 @@ createWindow({
                 name: "volume",
                 min: "0",
                 max: "100",
+                value: String(applicationState.volume),
                 oninput() {
                   applicationState.volume = this.value;
+                },
+              },
+            },
+          ],
+        },
+        {
+          type: "label",
+          class: "flex flex-row gap-2",
+          children: [
+            {
+              type: "span",
+              children: "Frequency",
+            },
+            {
+              type: "input",
+              attributes: {
+                type: "range",
+                name: "volume",
+                min: "0",
+                max: "3000",
+                value: String(applicationState.frequency),
+                oninput() {
+                  applicationState.frequency = this.value;
                 },
               },
             },
