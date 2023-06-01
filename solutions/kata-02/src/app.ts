@@ -6,6 +6,7 @@ type Element = {
   type: string;
   class?: string;
   children: string | Element[];
+  attributes?: Record<string, () => void>;
 };
 
 const $body = document.body;
@@ -22,12 +23,16 @@ createWindow({
         {
           type: "button",
           children: "⏵",
-          // TODO: handler
+          attributes: {
+            onclick: () => console.log("clicked play"),
+          },
         },
         {
           type: "button",
           children: "⏸",
-          // TODO: handler
+          attributes: {
+            onclick: () => console.log("clicked pause"),
+          },
         },
       ],
     },
@@ -74,6 +79,12 @@ function elementToDOM(element: Element) {
 
   if (element.class) {
     $element.classList.add(...element.class.split(" "));
+  }
+
+  if (element.attributes) {
+    Object.entries(element.attributes).map(([k, v]) => {
+      $element[k] = v;
+    });
   }
 
   if (typeof element.children === "string") {
