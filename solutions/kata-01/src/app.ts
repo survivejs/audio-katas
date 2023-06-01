@@ -1,13 +1,12 @@
-import { draggable } from "../../utils/draggable";
+import { createWindow } from "../../utils/window";
 
 console.log("hello daw");
 
-makeDraggable(document.getElementById("draggable"));
+const $body = document.body;
 
-function makeDraggable(draggableElement: HTMLElement | null) {
-  if (draggableElement) {
-    const handleElement = draggableElement.children[0] as HTMLElement;
-
-    draggable({ element: draggableElement, handle: handleElement });
-  }
-}
+createWindow({
+  $parent: $body,
+  klass: "left-1/2",
+  title: "Header",
+  body: [{ type: "div", children: "Body" }],
+});

@@ -6,14 +6,11 @@ The reference implementation for the katas has been implemented using vanilla DO
 
 ## Learning aims
 
-The idea here is to get acquainted with the Web Audio API and get a development environment going:
-
-* Bootstrapping a Parcel application, optionally with Tailwind for styling
-* Creating a basic abstraction for draggable windows as the actual functionality of the DAW will be built within these
+The only aim of the first kata is to get a development setup going and get used to work with katas.
 
 ## Task
 
 Complete the following:
 
-1. Bootstrap a [Parcel](https://parceljs.org/) application on your computer. [See Tailwind documentation](https://tailwindcss.com/docs/guides/parcel) for individual steps. You can also include Tailwind at this point if you prefer to use it for styling.
-2. Set up an abstraction for draggable windows. The window should have a header that accepts a name and there should be space for content where we can add controls. If you go with plain DOM, I recommend using a helper like [dragjs](https://bebraw.github.io/dragjs/) for the dragging portion.
+1. Study the solution for the first kata and run it
+2. Decide whether or not you want to build on it. You can also bring your own development setup. In that case, replicate the functionality visible in the starter (i.e., draggable windows).

@@ -1,13 +1,6 @@
-import { draggable } from "../../utils/draggable";
+import { createWindow } from "../../utils/window";
 
 console.log("hello daw");
-
-type Element = {
-  type: string;
-  class?: string;
-  children?: string | Element[];
-  attributes?: Record<string, (() => void) | string>;
-};
 
 const $body = document.body;
 const initialState: {
@@ -167,81 +160,4 @@ function updateListeners(prop: string, value: number | string) {
   const $listeners = document.querySelectorAll(`[data-${String(prop)}]`);
 
   $listeners.forEach(($listener) => ($listener.innerHTML = String(value)));
-}
-
-function createWindow({
-  $parent,
-  title,
-  body,
-  // reserved word in JS
-  klass,
-}: {
-  $parent: HTMLElement;
-  title: string;
-  body: Element[];
-  klass?: string;
-}) {
-  const $window = document.createElement("div");
-  $window.classList.add("absolute", "border", "rounded-lg");
-
-  if (klass) {
-    $window.classList.add(...klass.split(" "));
-  }
-
-  const $title = elementToDOM({
-    type: "div",
-    class: "bg-slate-800 text-slate-200 rounded-t-lg p-2 hover:cursor-pointer",
-    children: title,
-  });
-  $window.appendChild($title);
-
-  const $body = elementToDOM({
-    type: "div",
-    class: "p-2",
-    children: body,
-  });
-  $window.appendChild($body);
-
-  $parent.appendChild($window);
-
-  makeDraggable($window);
-}
-
-function elementsToDOM(elements: Element[]) {
-  return elements.map(elementToDOM);
-}
-
-function elementToDOM(element: Element) {
-  const $element = document.createElement(element.type);
-
-  if (element.class) {
-    $element.classList.add(...element.class.split(" "));
-  }
-
-  if (element.attributes) {
-    Object.entries(element.attributes).map(([k, v]) => {
-      if (k.startsWith("on")) {
-        $element[k] = v;
-      } else {
-        // Trust that it's a string now since handlers are treated separately
-        $element.setAttribute(k, v as string);
-      }
-    });
-  }
-
-  if (typeof element.children === "string") {
-    $element.innerHTML = element.children;
-  } else if (element.children) {
-    $element.append(...elementsToDOM(element.children));
-  }
-
-  return $element;
-}
-
-function makeDraggable($draggable: HTMLElement | null) {
-  if ($draggable) {
-    const $handle = $draggable.children[0] as HTMLElement;
-
-    draggable({ element: $draggable, handle: $handle });
-  }
 }

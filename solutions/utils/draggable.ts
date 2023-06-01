@@ -363,4 +363,12 @@ function cursorY(_elem: HTMLElement, evt: MouseEvent | TouchEvent) {
   return evt.clientY;
 }
 
-export { draggable, slider, xyslider };
+function makeDraggable($draggable: HTMLElement | null) {
+  if ($draggable) {
+    const $handle = $draggable.children[0] as HTMLElement;
+
+    draggable({ element: $draggable, handle: $handle });
+  }
+}
+
+export { makeDraggable, draggable, slider, xyslider };
