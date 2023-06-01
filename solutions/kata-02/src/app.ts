@@ -10,9 +10,14 @@ type Element = {
 };
 
 const $body = document.body;
-const initialState: { playbackState: "paused" | "playing"; volume: number } = {
+const initialState: {
+  playbackState: "paused" | "playing";
+  volume: number;
+  frequency: number;
+} = {
   playbackState: "paused",
   volume: 50, // [0, 100]
+  frequency: 440,
 };
 const applicationState = new Proxy(initialState, {
   set(obj, prop, value) {
@@ -39,7 +44,7 @@ const audioContext = new AudioContext();
 
 const oscillator = audioContext.createOscillator();
 oscillator.type = "sine";
-oscillator.frequency.value = 440; // Hz
+oscillator.frequency.value = applicationState.frequency;
 
 // Volume
 const gainNode = audioContext.createGain();

@@ -17,13 +17,14 @@ Complete the following:
 1. Add a window with controls to start and stop playback
 2. Attach a Web Audio based sine wave oscillator to the controls so that it plays when you click start and stops when you click stop
 3. Add a volume control
-4. Add controls to adjust primary parameters that define a waveform
+4. Add a control for adjusting oscillator frequency
 5. Add a way to select between a couple of different waveform types
-6. Optional - Add a window for displaying and debugging application state
-7. Optional - Add a way to save oscillators
-8. Optional - Add a way to duplicate oscillators and play multiple at once
-9. Optional - Visualize oscillation in a separate window
-10. Optional - Implement a [theremin](https://en.wikipedia.org/wiki/Theremin) to allow adjusting two parameters of a waveform using a single control. A 2D slider is a good choice for this.
+6. Optional - Add a control that lets the use to change the oscillator type (not just sine)
+7. Optional - Add a window for displaying and debugging application state
+8. Optional - Add a way to save oscillators
+9. Optional - Add a way to duplicate oscillators and play multiple at once
+10. Optional - Visualize oscillation in a separate window
+11. Optional - Implement a [theremin](https://en.wikipedia.org/wiki/Theremin) to allow adjusting two parameters (volume, frequence for example) of a waveform using a single control. A 2D slider is a good choice for this.
 
 ## Reference
 
