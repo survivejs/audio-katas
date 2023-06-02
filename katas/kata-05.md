@@ -17,6 +17,7 @@ Complete the following:
 2. Optional - Allow setting up multiple tracks. For example, you could associate a sequencer window to a specific instrument and allow creation of multiple sequencer windows to model the feature.
 3. Optional - Match the four oscillators of the original 8-bit Nintendo and allow composing using them
 4. Optional - Allow playback of notes and play some legendary tune (Mario, Zelda, ...) through your system. To do this, you might need to implement some form of parser depending on the notation (pun intended).
+5. Optional - Implement a drum machine. This is similar to the first task but instead of notes, each row should trigger different drum instruments.
 
 ## Reference
 

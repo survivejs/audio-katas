@@ -26,3 +26,7 @@ Complete the following:
 * [Every noise at once](https://everynoise.com/)
 * [Ishkur's guide to music](http://music.ishkur.com/)
 * [Nyquist frequency](https://en.wikipedia.org/wiki/Nyquist_frequency)
+* [Foley (wikipedia)](https://en.wikipedia.org/wiki/Foley_(filmmaking))
+* [May the 4th be with you, in a new documentary on the sounds of Skywalker](https://cdm.link/2022/05/may-the-4th-be-with-you-in-a-new-documentary-on-the-sounds-of-skywalker/)
+* [Behind the Mac: Skywalker Sound | Apple (video)](https://www.youtube.com/watch?v=E99Et5mzxv0)
+* [Why Does Tears Of The Kingdom Sound So Good?](https://www.youtube.com/watch?v=toEdi_wjTGM) - good intro to tonality
