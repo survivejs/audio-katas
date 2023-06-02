@@ -99,12 +99,8 @@ function messageBroker(prop, payload) {
       break;
     case "sequence":
       applicationState = produce(applicationState, (draft) => {
-        draft.sequence[payload.x][payload.y] =
-          !draft.sequence[payload.x][payload.y];
+        draft.sequence[payload.x][payload.y] = payload.value;
       });
-
-      console.log("app state", applicationState.sequence);
-
       break;
     default:
       break;
@@ -113,10 +109,36 @@ function messageBroker(prop, payload) {
   updateListeners(prop, payload);
 }
 
-function updateListeners(prop: string, value: unknown) {
-  const $listeners = document.querySelectorAll(`[data-${String(prop)}]`);
+function updateListeners(prop: string, payload: unknown) {
+  // Refactor to data-value + check values through dataSet[prop]
+  // const $listeners = document.querySelectorAll(`[data-${String(prop)}]`);
+  const $keyListeners = document.querySelectorAll("[data-key]");
+  const $propMatches = Array.from($keyListeners).filter(
+    // @ts-expect-error This is fine (wrong type after filtering)
+    (e) => e.dataset.key === prop
+  );
 
-  $listeners.forEach(($listener) => ($listener.innerHTML = String(value)));
+  if (Array.isArray(payload)) {
+    // no-op: Ignore for now (sequencer init case)
+  }
+  // @ts-expect-error This is fine, maybe check object in a better way, though
+  else if (payload.x && payload.y) {
+    const $xyMatch = $propMatches.filter(
+      (e) =>
+        // @ts-expect-error This is fine (wrong type after filtering)
+        e.dataset.x === String(payload.x) && e.dataset.y === String(payload.y)
+    );
+
+    // The assumption is that there is only one match
+    if ($xyMatch.length) {
+      // @ts-expect-error This is fine as the type is wrong
+      $xyMatch[0].dataset.value = payload.value.toString();
+    }
+  } else {
+    $propMatches.forEach(
+      ($listener) => ($listener.innerHTML = String(payload))
+    );
+  }
 }
 
 async function loadSamples(audioContext: AudioContext) {

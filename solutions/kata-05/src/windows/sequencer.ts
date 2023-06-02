@@ -21,13 +21,29 @@ function init($parent, applicationState, set) {
                 children: [
                   {
                     type: "button",
-                    class: "bg-slate-200 w-6 h-6",
+                    class:
+                      "bg-slate-200 w-6 h-6 data-[value=true]:bg-slate-400",
                     // TODO: Figure out toggling via a data attribute or so
                     // if this will be a controlled component.
                     children: key,
                     attributes: {
+                      "data-key": "sequence",
+                      "data-value": applicationState.sequence[x][y],
+                      "data-x": x,
+                      "data-y": y,
                       onclick() {
-                        set("sequence", { x, y });
+                        console.log(
+                          "setting",
+                          x,
+                          y,
+                          applicationState.sequence[x][y]
+                        );
+
+                        set("sequence", {
+                          x,
+                          y,
+                          value: !applicationState.sequence[x][y],
+                        });
                       },
                     },
                   },
