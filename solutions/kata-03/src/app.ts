@@ -10,19 +10,23 @@ const initialState: {
   frequency: number;
 } = {
   playbackState: "paused",
-  volume: 50, // [0, 100]
+  volume: 0, // [0, 100]
   frequency: 440,
 };
+
+let previousVolume = initialState.volume / 100;
 const applicationState = new Proxy(initialState, {
   set(obj, prop, value) {
     updateListeners(String(prop), value);
 
     if (prop === "playbackState") {
       if (value === "paused") {
-        audioContext.suspend();
+        previousVolume = gainNode.gain.value;
+        gainNode.gain.value = 0;
       }
       if (value === "playing") {
         audioContext.resume();
+        gainNode.gain.value = previousVolume;
       }
     }
     if (prop === "volume") {
@@ -52,9 +56,6 @@ gainNode.connect(audioContext.destination);
 
 // This can be run only once!
 oscillator.start();
-
-// Don't play anything initially. Maybe there is a better spot for this
-audioContext.suspend();
 
 createWindow({
   $parent: $body,

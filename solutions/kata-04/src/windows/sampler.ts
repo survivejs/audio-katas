@@ -48,7 +48,6 @@ function playSample(audioContext: AudioContext, sample: AudioBuffer) {
   const source = audioContext.createBufferSource();
   source.buffer = sample;
   source.connect(audioContext.destination);
-
   source.start();
 }
 

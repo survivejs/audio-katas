@@ -26,7 +26,7 @@ const initialState: {
   },
 };
 
-let previousVolume = 0;
+let previousVolume = initialState.volume / 100;
 const applicationState = new Proxy(initialState, {
   set(obj, prop, value) {
     updateListeners(String(prop), value);
@@ -37,6 +37,7 @@ const applicationState = new Proxy(initialState, {
         gainNode.gain.value = 0;
       }
       if (value === "playing") {
+        audioContext.resume();
         gainNode.gain.value = previousVolume;
       }
     }
@@ -52,6 +53,9 @@ const applicationState = new Proxy(initialState, {
 });
 
 // Create audio graph
+// TODO: Check https://stackoverflow.com/a/76175156/228885
+// Likely there's a better way to create an audio context
+// as that avoids confusion with .resume() since it won't be suspended.
 const audioContext = new AudioContext();
 
 // Set up an oscillator
