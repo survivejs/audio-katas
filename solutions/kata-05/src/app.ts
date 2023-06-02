@@ -17,7 +17,7 @@ type ApplicationState = {
     kick: AudioBuffer | null;
     snare: AudioBuffer | null;
   };
-  sequence: Record<number, boolean[]>; // boolean[][];
+  sequence: boolean[][];
 };
 
 const $body = document.body;
@@ -29,11 +29,8 @@ let applicationState: ApplicationState = {
     kick: null,
     snare: null,
   },
-  sequence: Object.fromEntries(
-    Array.from(new Array(10), (_, i) => [
-      i,
-      Array.from(new Array(10), () => false),
-    ])
+  sequence: Array.from(new Array(10), () =>
+    Array.from(new Array(10), () => false)
   ),
 };
 
@@ -64,7 +61,7 @@ initDebugWindow($body, applicationState);
 initKeyboard($body, applicationState, messageBroker);
 initOscillator($body, applicationState, messageBroker);
 initSampler($body, applicationState, audioContext);
-initSequencer($body, applicationState);
+initSequencer($body, applicationState, messageBroker);
 
 // Make initial state visible in the UI
 Object.entries(applicationState).map(([k, v]) => updateListeners(k, v));
@@ -100,7 +97,15 @@ function messageBroker(prop, payload) {
 
       oscillator.frequency.value = payload;
       break;
-    // TODO: Handle sequence case
+    case "sequence":
+      applicationState = produce(applicationState, (draft) => {
+        draft.sequence[payload.x][payload.y] =
+          !draft.sequence[payload.x][payload.y];
+      });
+
+      console.log("app state", applicationState.sequence);
+
+      break;
     default:
       break;
   }

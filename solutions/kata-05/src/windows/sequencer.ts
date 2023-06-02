@@ -1,7 +1,7 @@
 import { Scale } from "tonal";
 import { createWindow } from "../../../utils/window";
 
-function init($parent, applicationState) {
+function init($parent, applicationState, set) {
   createWindow({
     $parent,
     klass: "top-1/2 left-1/2",
@@ -22,20 +22,12 @@ function init($parent, applicationState) {
                   {
                     type: "button",
                     class: "bg-slate-200 w-6 h-6",
+                    // TODO: Figure out toggling via a data attribute or so
+                    // if this will be a controlled component.
                     children: key,
                     attributes: {
                       onclick() {
-                        // TODO
-                        //applicationState.sequence[x][y] =
-                        //  !applicationState.sequence[x][y];
-                        /*applicationState.sequence[x] =
-                          applicationState.sequence[x]
-                            .slice(0, y)
-                            .concat(!applicationState.sequence[x][y])
-                            .concat(applicationState.sequence[x].slice(y));
-*/
-
-                        console.log("clicked", x, y);
+                        set("sequence", { x, y });
                       },
                     },
                   },
