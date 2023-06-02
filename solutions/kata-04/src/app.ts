@@ -1,5 +1,7 @@
-import { Note, Scale } from "tonal";
-import { createWindow } from "../../utils/window";
+// import { kick, snare } from "@teropa/drumkit";
+import { init as initDebugWindow } from "./windows/debug";
+import { init as initKeyboard } from "./windows/keyboard";
+import { init as initPlayback } from "./windows/playback";
 
 console.log("hello daw");
 
@@ -39,6 +41,7 @@ const applicationState = new Proxy(initialState, {
 // Create audio graph
 const audioContext = new AudioContext();
 
+// Set up an oscillator
 const oscillator = audioContext.createOscillator();
 oscillator.type = "sine";
 oscillator.frequency.value = applicationState.frequency;
@@ -56,132 +59,16 @@ oscillator.start();
 // Don't play anything initially. Maybe there is a better spot for this
 audioContext.suspend();
 
-createWindow({
-  $parent: $body,
-  klass: "left-1/2",
-  title: "Debug",
-  body: [
-    { type: "div", children: "", attributes: { "data-playbackState": "" } },
-    { type: "div", children: "", attributes: { "data-volume": "" } },
-    { type: "div", children: "", attributes: { "data-frequency": "" } },
-  ],
-});
+// const kickInstrument = await loadSample(kick);
+// const snareInstrument = await loadSample(snare);
 
-createWindow({
-  $parent: $body,
-  klass: "left-2/3",
-  title: "Keyboard",
-  body: [
-    {
-      type: "ul",
-      class: "flex flex-row",
-      children: Scale.get("C major").notes.map((key) => ({
-        type: "li",
-        class:
-          "border drop-shadow-md px-4 py-16 hover:cursor-pointer active:bg-slate-50",
-        children: key, // "&nbsp;",
-        attributes: {
-          "data-key": key,
-          onclick() {
-            const key = this.dataset.key;
+// console.log(kick, kickInstrument);
 
-            // Pick from the fourth octave
-            const frequency = Note.freq(key + 4);
+// const track = audioContext.createMediaElementSource(audioElement);
 
-            if (typeof frequency === "number") {
-              applicationState.frequency = frequency;
-            }
-          },
-        },
-      })),
-    },
-  ],
-});
-
-createWindow({
-  $parent: $body,
-  klass: "left-5",
-  title: "Playback",
-  // https://en.wikipedia.org/wiki/Media_control_symbols
-  body: [
-    {
-      type: "div",
-      class: "flex flex-col gap-2",
-      children: [
-        {
-          type: "div",
-          class: "flex flex-row gap-2",
-          children: [
-            {
-              type: "button",
-              children: "⏵",
-              attributes: {
-                onclick() {
-                  applicationState.playbackState = "playing";
-                },
-              },
-            },
-            {
-              type: "button",
-              children: "⏸",
-              attributes: {
-                onclick() {
-                  applicationState.playbackState = "paused";
-                },
-              },
-            },
-          ],
-        },
-        {
-          type: "label",
-          class: "flex flex-row gap-2",
-          children: [
-            {
-              type: "span",
-              children: "Volume",
-            },
-            {
-              type: "input",
-              attributes: {
-                type: "range",
-                name: "volume",
-                min: "0",
-                max: "100",
-                value: String(applicationState.volume),
-                oninput() {
-                  applicationState.volume = this.value;
-                },
-              },
-            },
-          ],
-        },
-        {
-          type: "label",
-          class: "flex flex-row gap-2",
-          children: [
-            {
-              type: "span",
-              children: "Frequency",
-            },
-            {
-              type: "input",
-              attributes: {
-                type: "range",
-                name: "volume",
-                min: "0",
-                max: "3000",
-                value: String(applicationState.frequency),
-                oninput() {
-                  applicationState.frequency = this.value;
-                },
-              },
-            },
-          ],
-        },
-      ],
-    },
-  ],
-});
+initDebugWindow($body, applicationState);
+initKeyboard($body, applicationState);
+initPlayback($body, applicationState);
 
 // Make initial state visible in the UI
 Object.entries(initialState).map(([k, v]) => updateListeners(k, v));
@@ -190,4 +77,10 @@ function updateListeners(prop: string, value: number | string) {
   const $listeners = document.querySelectorAll(`[data-${String(prop)}]`);
 
   $listeners.forEach(($listener) => ($listener.innerHTML = String(value)));
+}
+
+function loadSample(instrument) {
+  return fetch(instrument)
+    .then((res) => res.arrayBuffer())
+    .then((buf) => audioContext.decodeAudioData(buf));
 }

@@ -21,6 +21,7 @@ Complete the following:
 
 ## Reference
 
+* [Loading sound (MDN)](https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API#loading_sound)
 * [Sample rates and audio sampling: a guide for beginners](https://www.adobe.com/uk/creativecloud/video/discover/audio-sampling.html)
 * [High-resolution real-time spectrum analyzer and music player using Web Audio and Canvas APIs](https://github.com/hvianna/audioMotion.js)
 * [Every noise at once](https://everynoise.com/)
