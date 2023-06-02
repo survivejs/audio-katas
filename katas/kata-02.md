@@ -42,6 +42,7 @@ Complete the following:
 * [Web Audio API: Why Compose When You Can Code?](https://www.toptal.com/web/web-audio-api-tutorial)
 * [Introduction to the Web Audio API at ui.dev](https://ui.dev/web-audio-api)
 * [How to make chiptunes](https://soundation.com/music-genres/how-to-make-chiptunes)
+* [Ultimate Introduction to Chiptune Programs Part 1: General Tools (video)](https://www.youtube.com/watch?v=WNxw8OzUwfg)
 * [Fourier transform (wikipedia)](https://en.wikipedia.org/wiki/Fourier_transform)
 * [Web Audio related libraries on GitHub](https://github.com/topics/webaudio-api?l=javascript)
 * [Web Audio Synthesis & Visualization](https://frontendmasters.com/courses/web-audio/) - Paid course
