@@ -1,6 +1,6 @@
 import { createWindow } from "../../../utils/window";
 
-function init($parent, applicationState, set) {
+function init($parent, send) {
   createWindow({
     $parent,
     klass: "left-5",
@@ -20,7 +20,7 @@ function init($parent, applicationState, set) {
                 children: "⏵",
                 attributes: {
                   onclick() {
-                    set("playbackState", "playing");
+                    send("set", "playbackState", "playing");
                   },
                 },
               },
@@ -29,7 +29,7 @@ function init($parent, applicationState, set) {
                 children: "⏸",
                 attributes: {
                   onclick() {
-                    set("playbackState", "paused");
+                    send("set", "playbackState", "paused");
                   },
                 },
               },
@@ -50,9 +50,9 @@ function init($parent, applicationState, set) {
                   name: "volume",
                   min: "0",
                   max: "100",
-                  value: String(applicationState.volume),
+                  value: String(send("get", "volume")),
                   oninput() {
-                    set("volume", this.value);
+                    send("set", "volume", this.value);
                   },
                 },
               },
@@ -73,9 +73,9 @@ function init($parent, applicationState, set) {
                   name: "volume",
                   min: "0",
                   max: "3000",
-                  value: String(applicationState.frequency),
+                  value: String(send("get", "frequency")),
                   oninput() {
-                    set("frequency", this.value);
+                    send("set", "frequency", this.value);
                   },
                 },
               },

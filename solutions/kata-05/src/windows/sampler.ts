@@ -1,6 +1,6 @@
 import { createWindow } from "../../../utils/window";
 
-function init($parent, applicationState, audioContext: AudioContext) {
+function init($parent, send, audioContext: AudioContext) {
   createWindow({
     $parent,
     klass: "left-1/3",
@@ -20,7 +20,7 @@ function init($parent, applicationState, audioContext: AudioContext) {
                 children: "kick",
                 attributes: {
                   onclick() {
-                    playSample(audioContext, applicationState.instruments.kick);
+                    playSample(audioContext, send("get", "instruments").kick);
                   },
                 },
               },
@@ -29,10 +29,7 @@ function init($parent, applicationState, audioContext: AudioContext) {
                 children: "snare",
                 attributes: {
                   onclick() {
-                    playSample(
-                      audioContext,
-                      applicationState.instruments.snare
-                    );
+                    playSample(audioContext, send("get", "instruments").snare);
                   },
                 },
               },

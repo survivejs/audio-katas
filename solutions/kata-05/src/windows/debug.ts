@@ -1,6 +1,6 @@
 import { createWindow } from "../../../utils/window";
 
-function init($parent, applicationState) {
+function init($parent, _send) {
   createWindow({
     $parent,
     klass: "left-1/2",

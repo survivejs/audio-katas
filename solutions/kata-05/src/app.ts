@@ -57,61 +57,67 @@ oscillator.start();
 
 loadSamples(audioContext);
 
-initDebugWindow($body, applicationState);
-initKeyboard($body, applicationState, messageBroker);
-initOscillator($body, applicationState, messageBroker);
-initSampler($body, applicationState, audioContext);
-initSequencer($body, applicationState, messageBroker);
+initDebugWindow($body, messageBroker);
+initKeyboard($body, messageBroker);
+initOscillator($body, messageBroker);
+initSampler($body, messageBroker, audioContext);
+initSequencer($body, messageBroker);
 
 // Make initial state visible in the UI
 Object.entries(applicationState).map(([k, v]) => updateListeners(k, v));
 
 let previousVolume = applicationState.volume / 100;
-function messageBroker(prop, payload) {
-  switch (prop) {
-    case "playbackState":
-      applicationState = produce(applicationState, (draft) => {
-        draft.playbackState = payload;
-      });
+function messageBroker(type, prop, payload) {
+  switch (type) {
+    case "get":
+      return applicationState[prop];
+    case "set":
+      switch (prop) {
+        case "playbackState":
+          applicationState = produce(applicationState, (draft) => {
+            draft.playbackState = payload;
+          });
 
-      if (payload === "paused") {
-        previousVolume = gainNode.gain.value;
-        gainNode.gain.value = 0;
+          if (payload === "paused") {
+            previousVolume = gainNode.gain.value;
+            gainNode.gain.value = 0;
+          }
+          if (payload === "playing") {
+            audioContext.resume();
+            gainNode.gain.value = previousVolume;
+          }
+          break;
+        case "volume":
+          applicationState = produce(applicationState, (draft) => {
+            draft.volume = payload;
+          });
+
+          gainNode.gain.value = payload / 100;
+          break;
+        case "frequency":
+          applicationState = produce(applicationState, (draft) => {
+            draft.frequency = payload;
+          });
+
+          oscillator.frequency.value = payload;
+          break;
+        case "sequence":
+          applicationState = produce(applicationState, (draft) => {
+            draft.sequence[payload.x][payload.y] = payload.value;
+          });
+          break;
+        default:
+          break;
       }
-      if (payload === "playing") {
-        audioContext.resume();
-        gainNode.gain.value = previousVolume;
-      }
-      break;
-    case "volume":
-      applicationState = produce(applicationState, (draft) => {
-        draft.volume = payload;
-      });
 
-      gainNode.gain.value = payload / 100;
-      break;
-    case "frequency":
-      applicationState = produce(applicationState, (draft) => {
-        draft.frequency = payload;
-      });
-
-      oscillator.frequency.value = payload;
-      break;
-    case "sequence":
-      applicationState = produce(applicationState, (draft) => {
-        draft.sequence[payload.x][payload.y] = payload.value;
-      });
+      updateListeners(prop, payload);
       break;
     default:
       break;
   }
-
-  updateListeners(prop, payload);
 }
 
 function updateListeners(prop: string, payload: unknown) {
-  // Refactor to data-value + check values through dataSet[prop]
-  // const $listeners = document.querySelectorAll(`[data-${String(prop)}]`);
   const $keyListeners = document.querySelectorAll("[data-key]");
   const $propMatches = Array.from($keyListeners).filter(
     // @ts-expect-error This is fine (wrong type after filtering)
@@ -119,10 +125,11 @@ function updateListeners(prop: string, payload: unknown) {
   );
 
   if (Array.isArray(payload)) {
-    // no-op: Ignore for now (sequencer init case)
+    // no-op: Ignore for now (sequencer init case), this needs some generic solution
+    // based on a type check.
   }
   // @ts-expect-error This is fine, maybe check object in a better way, though
-  else if (payload.x && payload.y) {
+  else if (payload.hasOwnProperty("x") && payload.hasOwnProperty("y")) {
     const $xyMatch = $propMatches.filter(
       (e) =>
         // @ts-expect-error This is fine (wrong type after filtering)

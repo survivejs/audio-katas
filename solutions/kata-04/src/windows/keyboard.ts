@@ -1,7 +1,7 @@
 import { Note, Scale } from "tonal";
 import { createWindow } from "../../../utils/window";
 
-function init($parent, applicationState) {
+function init($parent, send) {
   createWindow({
     $parent,
     klass: "left-2/3",
@@ -24,7 +24,7 @@ function init($parent, applicationState) {
               const frequency = Note.freq(key + 4);
 
               if (typeof frequency === "number") {
-                applicationState.frequency = frequency;
+                send("set", "frequency", frequency);
               }
             },
           },
