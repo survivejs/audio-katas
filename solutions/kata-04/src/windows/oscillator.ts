@@ -4,7 +4,7 @@ function init($parent, applicationState) {
   createWindow({
     $parent,
     klass: "left-5",
-    title: "Playback",
+    title: "Oscillator",
     // https://en.wikipedia.org/wiki/Media_control_symbols
     body: [
       {

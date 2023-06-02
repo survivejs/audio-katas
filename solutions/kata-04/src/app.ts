@@ -1,7 +1,8 @@
-// import { kick, snare } from "@teropa/drumkit";
+import { kick, snare } from "@teropa/drumkit";
 import { init as initDebugWindow } from "./windows/debug";
 import { init as initKeyboard } from "./windows/keyboard";
-import { init as initPlayback } from "./windows/playback";
+import { init as initOscillator } from "./windows/oscillator";
+import { init as initSampler } from "./windows/sampler";
 
 console.log("hello daw");
 
@@ -10,21 +11,33 @@ const initialState: {
   playbackState: "paused" | "playing";
   volume: number;
   frequency: number;
+  instruments: {
+    // null as in not loaded yet
+    kick: AudioBuffer | null;
+    snare: AudioBuffer | null;
+  };
 } = {
   playbackState: "paused",
-  volume: 50, // [0, 100]
+  volume: 0, // [0, 100]
   frequency: 440,
+  instruments: {
+    kick: null,
+    snare: null,
+  },
 };
+
+let previousVolume = 0;
 const applicationState = new Proxy(initialState, {
   set(obj, prop, value) {
     updateListeners(String(prop), value);
 
     if (prop === "playbackState") {
       if (value === "paused") {
-        audioContext.suspend();
+        previousVolume = gainNode.gain.value;
+        gainNode.gain.value = 0;
       }
       if (value === "playing") {
-        audioContext.resume();
+        gainNode.gain.value = previousVolume;
       }
     }
     if (prop === "volume") {
@@ -56,30 +69,28 @@ gainNode.connect(audioContext.destination);
 // This can be run only once!
 oscillator.start();
 
-// Don't play anything initially. Maybe there is a better spot for this
-audioContext.suspend();
-
-// const kickInstrument = await loadSample(kick);
-// const snareInstrument = await loadSample(snare);
-
-// console.log(kick, kickInstrument);
-
-// const track = audioContext.createMediaElementSource(audioElement);
+loadSamples(audioContext);
 
 initDebugWindow($body, applicationState);
 initKeyboard($body, applicationState);
-initPlayback($body, applicationState);
+initOscillator($body, applicationState);
+initSampler($body, applicationState, audioContext);
 
 // Make initial state visible in the UI
 Object.entries(initialState).map(([k, v]) => updateListeners(k, v));
 
-function updateListeners(prop: string, value: number | string) {
+function updateListeners(prop: string, value: unknown) {
   const $listeners = document.querySelectorAll(`[data-${String(prop)}]`);
 
   $listeners.forEach(($listener) => ($listener.innerHTML = String(value)));
 }
 
-function loadSample(instrument) {
+async function loadSamples(audioContext: AudioContext) {
+  applicationState.instruments.kick = await loadSample(audioContext, kick);
+  applicationState.instruments.snare = await loadSample(audioContext, snare);
+}
+
+async function loadSample(audioContext: AudioContext, instrument: string) {
   return fetch(instrument)
     .then((res) => res.arrayBuffer())
     .then((buf) => audioContext.decodeAudioData(buf));
