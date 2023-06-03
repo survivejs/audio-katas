@@ -1,3 +1,4 @@
+import { playSample } from "../../../utils/audio";
 import { createWindow } from "../../../utils/window";
 
 function init($parent, send, audioContext: AudioContext) {
@@ -39,13 +40,6 @@ function init($parent, send, audioContext: AudioContext) {
       },
     ],
   });
-}
-
-function playSample(audioContext: AudioContext, sample: AudioBuffer) {
-  const source = audioContext.createBufferSource();
-  source.buffer = sample;
-  source.connect(audioContext.destination);
-  source.start();
 }
 
 export { init };

@@ -5,6 +5,7 @@ import { init as initKeyboard } from "./windows/keyboard";
 import { init as initOscillator } from "./windows/oscillator";
 import { init as initSampler } from "./windows/sampler";
 import { init as initSequencer } from "./windows/sequencer";
+import { loadSample } from "../../utils/audio";
 
 console.log("hello daw");
 
@@ -151,10 +152,4 @@ function updateListeners(prop: string, payload: unknown) {
 async function loadSamples(audioContext: AudioContext) {
   applicationState.instruments.kick = await loadSample(audioContext, kick);
   applicationState.instruments.snare = await loadSample(audioContext, snare);
-}
-
-async function loadSample(audioContext: AudioContext, instrument: string) {
-  return fetch(instrument)
-    .then((res) => res.arrayBuffer())
-    .then((buf) => audioContext.decodeAudioData(buf));
 }
