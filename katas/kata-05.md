@@ -13,11 +13,13 @@ The minimal target of this kata is to understand the basic ideas behind sequenci
 
 Complete the following:
 
-1. Set up a window with a user interface that contains rows of toggleable buttons. Each row represents a series of steps and each column represents a note within the step. When the button is enabled, a note should be played. When disabled, nothing should happen.
-2. Optional - Allow setting up multiple tracks. For example, you could associate a sequencer window to a specific instrument and allow creation of multiple sequencer windows to model the feature.
-3. Optional - Match the four oscillators of the original 8-bit Nintendo and allow composing using them
-4. Optional - Allow playback of notes and play some legendary tune (Mario, Zelda, ...) through your system. To do this, you might need to implement some form of parser depending on the notation (pun intended).
-5. Optional - Implement a drum machine. This is similar to the first task but instead of notes, each row should trigger different drum instruments.
+1. Set up a window with a user interface that contains rows of toggleable buttons. Each row represents a series of steps and each column represents a note within the step. When the button is enabled, a note should be played. When disabled, nothing should happen. In the first phase, it is enough to support only one note per column.
+2. Optional - Support playing multiple notes per column.
+3. Optional - Allow adjusting tempo.
+4. Optional - Allow setting up multiple tracks. For example, you could associate a sequencer window to a specific instrument and allow creation of multiple sequencer windows to model the feature.
+5. Optional - Match the four oscillators of the original 8-bit Nintendo and allow composing using them
+6. Optional - Allow playback of notes and play some legendary tune (Mario, Zelda, ...) through your system. To do this, you might need to implement some form of parser depending on the notation (pun intended).
+7. Optional - Implement a drum machine. This is similar to the first task but instead of notes, each row should trigger different drum instruments and play samples.
 
 ## Reference
 

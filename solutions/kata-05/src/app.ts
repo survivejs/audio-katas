@@ -1,4 +1,5 @@
 import { produce } from "immer";
+import { Note, Scale } from "tonal";
 import { kick, snare } from "@teropa/drumkit";
 import { init as initDebugWindow } from "./windows/debug";
 import { init as initKeyboard } from "./windows/keyboard";
@@ -6,6 +7,12 @@ import { init as initOscillator } from "./windows/oscillator";
 import { init as initSampler } from "./windows/sampler";
 import { init as initSequencer } from "./windows/sequencer";
 import { loadSample } from "../../utils/audio";
+
+// TODO: Share this with the sequencer so they stay in sync
+const C_NOTE_FREQUENCIES = Scale.get("C major").notes.map((note) =>
+  // Pick from the fourth octave
+  Note.freq(note + 4)
+);
 
 console.log("hello daw");
 
@@ -58,17 +65,44 @@ oscillator.start();
 
 loadSamples(audioContext);
 
-initDebugWindow($body, messageBroker);
-initKeyboard($body, messageBroker);
-initOscillator($body, messageBroker);
-initSampler($body, messageBroker, audioContext);
-initSequencer($body, messageBroker);
+initDebugWindow($body, sendMessage);
+initKeyboard($body, sendMessage);
+initOscillator($body, sendMessage);
+initSampler($body, sendMessage, audioContext);
+initSequencer($body, sendMessage);
 
 // Make initial state visible in the UI
 Object.entries(applicationState).map(([k, v]) => updateListeners(k, v));
 
+// Set up a scheduler to play our song
+// Adapted from https://sonoport.github.io/web-audio-clock.html
+let note = 0;
+let nextNotetime = audioContext.currentTime;
+function scheduler() {
+  while (nextNotetime < audioContext.currentTime + 0.1) {
+    const currentNotes =
+      applicationState.sequence[note % applicationState.sequence.length];
+    const firstNoteIndex = currentNotes.findIndex((a) => a === true);
+
+    // Since we have only one oscillator, play only the first note
+    if (firstNoteIndex >= 0) {
+      // Map to a note
+      const noteFrequency = C_NOTE_FREQUENCIES[firstNoteIndex];
+
+      sendMessage("set", "frequency", noteFrequency);
+    }
+
+    nextNotetime += 0.5;
+    note++;
+  }
+
+  window.setTimeout(scheduler, 50.0);
+}
+
+scheduler();
+
 let previousVolume = applicationState.volume / 100;
-function messageBroker(type, prop, payload) {
+function sendMessage(type, prop, payload) {
   switch (type) {
     case "get":
       return applicationState[prop];
