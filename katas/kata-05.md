@@ -19,27 +19,39 @@ Complete the following:
 4. Optional - Allow playback of notes and play some legendary tune (Mario, Zelda, ...) through your system. To do this, you might need to implement some form of parser depending on the notation (pun intended).
 5. Optional - Implement a drum machine. This is similar to the first task but instead of notes, each row should trigger different drum instruments.
 
-## Reference
+## Web Audio
 
+* [Using IIR Filters](https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Using_IIR_filters)
+* [Web audio spatialization basics](https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Web_audio_spatialization_basics)
 * [Advanced techniques: Creating and sequencing audio](https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Advanced_techniques)
 * [Sequencer example](https://jonoliver.codes/sequencer/)
 * [WASM SYNTH, or, how music taught me the beauty of math](https://proofinprogress.com/posts/2020-02-19/wasm-synth.html)
 * [WebularSynth](https://github.com/cantastage/webular-synth)
 * [webaudio-tinysynth](https://g200kg.github.io/webaudio-tinysynth/)
+
+## Concepts
+
+* [Beat and tempo explained](https://learningmusic.ableton.com/make-beats/beat-and-tempo.html)
+* [Music tracker (wikipedia)](https://en.wikipedia.org/wiki/Music_tracker)
+
+## Programs
+
 * [Roland50 Studio](https://roland50.studio/)
 * [iO-808](https://io808.com/)
 * [The Mini Moog Factory](https://www.moogmusic.com/news/celebrate-our-70th-anniversary-and-bobs-birthday-new-virtual-experience)
-* [Using IIR Filters](https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Using_IIR_filters)
-* [Beat and tempo explained](https://learningmusic.ableton.com/make-beats/beat-and-tempo.html)
-* [Music tracker (wikipedia)](https://en.wikipedia.org/wiki/Music_tracker)
-* [Web audio spatialization basics](https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Web_audio_spatialization_basics)
 * [GarageBand](https://www.apple.com/mac/garageband/)
+
+## Game audio libraries
+
 * [iMUSE](https://en.wikipedia.org/wiki/IMUSE)
 * [fmod](https://www.fmod.com/)
 * [wwise](https://en.wikipedia.org/wiki/Audiokinetic_Wwise)
-* [I Dream of Wires](https://www.imdb.com/title/tt3636334/) - documentary
-* [Sisters with Transistors](https://www.imdb.com/title/tt6744250/) - documentary
-* [Subharcord](https://www.imdb.com/title/tt19244906/) - documentary
+
+## Documentaries
+
+* [I Dream of Wires](https://www.imdb.com/title/tt3636334/)
+* [Sisters with Transistors](https://www.imdb.com/title/tt6744250/)
+* [Subharcord](https://www.imdb.com/title/tt19244906/)
 
 ## Songs
 
