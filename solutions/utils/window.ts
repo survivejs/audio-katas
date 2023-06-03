@@ -37,6 +37,8 @@ function createWindow({
   $parent.appendChild($window);
 
   makeDraggable($window);
+
+  return $window;
 }
 
 export { createWindow };

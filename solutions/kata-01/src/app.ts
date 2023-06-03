@@ -1,5 +1,5 @@
 import { produce } from "immer";
-import { init as initDebugWindow } from "./windows/debug";
+import { plugin as debugPlugin } from "./windows/debug";
 import { updateStateListeners } from "../../utils/state";
 
 console.log("hello daw");
@@ -13,7 +13,7 @@ let applicationState: ApplicationState = {
   test: 123,
 };
 
-initDebugWindow($body, sendMessage);
+debugPlugin.init({ $parent: $body, send: sendMessage });
 
 // Make initial state visible in the UI
 Object.entries(applicationState).map(([k, v]) => updateStateListeners(k, v));
