@@ -10,9 +10,9 @@
 * **12:00-13:00 - Lunch**
 * 13:00-13:45 - Kata 4 - Audio sampling
 * 13:45-14:00 - Review kata 4
-* **14:00-14:30 - Coffee break**
-* 14:30-15:15 - Kata 5 - Music sequencing
-* 15:15-15:30 - Review kata 5
+* 14:00-14:45 - Kata 5 - Music sequencing
+* 14:45-15:00 - Review kata 5
+* **15:00-15:30 - Coffee break**
 * 15:30-16:15 - Kata 6 - Audio worklets
 * 16:15-16:30 - Review kata 6
 * 16:30-17:00 - Let's review together what everyone built, recap, and finish the day
