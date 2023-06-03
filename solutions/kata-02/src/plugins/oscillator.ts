@@ -17,9 +17,6 @@ const plugin: Plugin = {
       frequency: 440,
     };
 
-    // Make initial state visible in the UI
-    Object.entries(pluginState).map(([k, v]) => updateStateListeners(k, v));
-
     const oscillator = audioContext.createOscillator();
     oscillator.type = "sine";
     oscillator.frequency.value = pluginState.frequency;
@@ -119,6 +116,9 @@ const plugin: Plugin = {
       ],
     });
 
+    // Make initial state visible in the UI
+    Object.entries(pluginState).map(([k, v]) => updateStateListeners(k, v));
+
     let previousVolume = pluginState.volume / 100;
     return {
       onMessage(type, prop, payload) {
@@ -156,7 +156,6 @@ const plugin: Plugin = {
               default:
                 break;
             }
-
             break;
           default:
             break;
