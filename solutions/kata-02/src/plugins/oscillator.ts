@@ -1,5 +1,6 @@
 import { produce } from "immer";
 import { createWindow } from "../../../utils/window";
+import { createOscillator } from "../../../utils/audio";
 import { updateStateListeners } from "../../../utils/state";
 import type { Plugin } from "../../../utils/types";
 
@@ -17,19 +18,11 @@ const plugin: Plugin = {
       frequency: 440,
     };
 
-    const oscillator = audioContext.createOscillator();
-    oscillator.type = "sine";
-    oscillator.frequency.value = pluginState.frequency;
-
-    // Volume
-    const gainNode = audioContext.createGain();
-    gainNode.gain.value = pluginState.volume / 100;
-
-    oscillator.connect(gainNode);
-    gainNode.connect(audioContext.destination);
-
-    // This can be run only once!
-    oscillator.start();
+    const { oscillator, gainNode } = createOscillator(
+      audioContext,
+      pluginState.frequency,
+      pluginState.volume
+    );
 
     createWindow({
       $parent,
