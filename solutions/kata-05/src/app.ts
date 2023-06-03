@@ -7,6 +7,7 @@ import { init as initOscillator } from "./windows/oscillator";
 import { init as initSampler } from "./windows/sampler";
 import { init as initSequencer } from "./windows/sequencer";
 import { loadSample } from "../../utils/audio";
+import { updateStateListeners } from "../../utils/state";
 
 // TODO: Share this with the sequencer so they stay in sync
 const C_NOTE_FREQUENCIES = Scale.get("C major").notes.map((note) =>
@@ -65,6 +66,7 @@ oscillator.start();
 
 loadSamples(audioContext);
 
+// Initialize windows
 initDebugWindow($body, sendMessage);
 initKeyboard($body, sendMessage);
 initOscillator($body, sendMessage);
@@ -72,7 +74,7 @@ initSampler($body, sendMessage, audioContext);
 initSequencer($body, sendMessage);
 
 // Make initial state visible in the UI
-Object.entries(applicationState).map(([k, v]) => updateListeners(k, v));
+Object.entries(applicationState).map(([k, v]) => updateStateListeners(k, v));
 
 // Set up a scheduler to play our song
 // Adapted from https://sonoport.github.io/web-audio-clock.html
@@ -101,6 +103,7 @@ function scheduler() {
 
 scheduler();
 
+// State management
 let previousVolume = applicationState.volume / 100;
 function sendMessage(type, prop, payload) {
   switch (type) {
@@ -145,41 +148,10 @@ function sendMessage(type, prop, payload) {
           break;
       }
 
-      updateListeners(prop, payload);
+      updateStateListeners(prop, payload);
       break;
     default:
       break;
-  }
-}
-
-function updateListeners(prop: string, payload: unknown) {
-  const $keyListeners = document.querySelectorAll("[data-key]");
-  const $propMatches = Array.from($keyListeners).filter(
-    // @ts-expect-error This is fine (wrong type after filtering)
-    (e) => e.dataset.key === prop
-  );
-
-  if (Array.isArray(payload)) {
-    // no-op: Ignore for now (sequencer init case), this needs some generic solution
-    // based on a type check.
-  }
-  // @ts-expect-error This is fine, maybe check object in a better way, though
-  else if (payload.hasOwnProperty("x") && payload.hasOwnProperty("y")) {
-    const $xyMatch = $propMatches.filter(
-      (e) =>
-        // @ts-expect-error This is fine (wrong type after filtering)
-        e.dataset.x === String(payload.x) && e.dataset.y === String(payload.y)
-    );
-
-    // The assumption is that there is only one match
-    if ($xyMatch.length) {
-      // @ts-expect-error This is fine as the type is wrong
-      $xyMatch[0].dataset.value = payload.value.toString();
-    }
-  } else {
-    $propMatches.forEach(
-      ($listener) => ($listener.innerHTML = String(payload))
-    );
   }
 }
 
