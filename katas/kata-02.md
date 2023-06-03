@@ -40,6 +40,7 @@ Complete the following:
 * [Web Audio API reference at MDN](https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API)
 * [Using the Web Audio API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
 * [Web Audio API: Why Compose When You Can Code?](https://www.toptal.com/web/web-audio-api-tutorial)
+* [Get started making sounds](https://learningsynths.ableton.com/)
 * [How synths make sound?](https://learningsynths.ableton.com/en/oscillators/how-synths-make-sound)
 * [Introduction to the Web Audio API at ui.dev](https://ui.dev/web-audio-api)
 * [How to make chiptunes](https://soundation.com/music-genres/how-to-make-chiptunes)
