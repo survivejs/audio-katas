@@ -28,7 +28,9 @@ Complete the following:
 12. Optional - Visualize oscillation in a separate window
 13. Optional - Implement a [theremin](https://en.wikipedia.org/wiki/Theremin) to allow adjusting two parameters (volume, frequence for example) of a waveform using a single control. A 2D slider is a good choice for this.
 
-## UI
+## Reference
+
+### UI
 
 * [Nexus](https://nexus-js.github.io/ui/) - UI helpers for audio interfaces
 * [classList API](https://developer.mozilla.org/en-US/docs/Web/API/Element/classList)
@@ -36,7 +38,7 @@ Complete the following:
 * [UTF media control symbols](https://en.wikipedia.org/wiki/Media_control_symbols)
 * [HTML button element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button)
 
-## Web Audio
+### Web Audio
 
 * [OscillatorNode](https://developer.mozilla.org/en-US/docs/Web/API/OscillatorNode)
 * [Oscillator examples](https://codepen.io/jonoliver/pen/NoawPv)
@@ -47,13 +49,13 @@ Complete the following:
 * [Web Audio related libraries on GitHub](https://github.com/topics/webaudio-api?l=javascript)
 * [Web Audio Synthesis & Visualization](https://frontendmasters.com/courses/web-audio/) - Paid course
 
-## Theory
+### Theory
 
 * [Get started making sounds](https://learningsynths.ableton.com/)
 * [How synths make sound?](https://learningsynths.ableton.com/en/oscillators/how-synths-make-sound)
 * [How to make chiptunes](https://soundation.com/music-genres/how-to-make-chiptunes)
 * [Fourier transform (wikipedia)](https://en.wikipedia.org/wiki/Fourier_transform)
 
-## Videos
+### Videos
 
 * [Ultimate Introduction to Chiptune Programs Part 1: General Tools (video)](https://www.youtube.com/watch?v=WNxw8OzUwfg)

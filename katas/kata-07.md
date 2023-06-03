@@ -17,13 +17,15 @@ Complete the following:
 2. See how much of the existing work can be pushed with a graph. Could the existing system be modeled entirely using a graph?
 3. Consider the pros and cons of dataflow programming. What possible ways exist for addressing the cons?
 
-## Libraries
+## Reference
+
+### Libraries
 
 * [litegraph.js](https://github.com/jagenjo/litegraph.js)
 * [flow-view](https://github.com/fibo/flow-view)
 * [Rete.js](https://retejs.org/docs/getting-started/)
 
-## Tools
+### Tools
 
 * [NoFlo](https://noflojs.org/) - [theremin example](https://app.flowhub.io/#project/6724a6eb8a1aaf351866e7a43c3ecd43/6724a6eb8a1aaf351866e7a43c3ecd43%2Fnoflo)
 * [Jeskola Buzz](http://jeskola.net/buzz/)

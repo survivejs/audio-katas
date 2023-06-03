@@ -23,21 +23,23 @@ Complete the following:
 7. Optional - Look up the [MIDI](https://en.wikipedia.org/wiki/MIDI) standard and consider how you might use it to expand the system with a physical device
 8. Optional - Add a musical note renderer using a library like [VexFlow](https://www.vexflow.com/)
 
-## UI
+## Reference
+
+### UI
 
 * [Piano example (css)](https://github.com/isbendiyarovanezrin/Piano)
 * [Complete piano example (codepen)](https://codepen.io/gabrielcarol/pen/rGeEbY)
 
-## Libraries
+### Libraries
 
 * [tonal](https://github.com/tonaljs/tonal) - a music theory library
 
-## Reference
+### Reference
 
 * [Note frequencies listed](https://pages.mtu.edu/~suits/notefreqs.html)
 * [Notes, Scales and Modes in Music](https://deviantnoise.com/music-theory/notes-scales-modes/)
 
-## Web Audio
+### Web Audio
 
 * [Recreating legendary 8-bit games music with Web Audio API](https://codepen.io/gregh/post/recreating-legendary-8-bit-games-music-with-web-audio-api)
 * [Making Noise with Web Audio API](https://sparkbox.com/foundry/chiptune_style_browser_generated_music_using_tone.js) - 12 min video
