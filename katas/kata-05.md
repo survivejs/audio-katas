@@ -33,6 +33,8 @@ Complete the following:
 * [WebularSynth](https://github.com/cantastage/webular-synth)
 * [webaudio-tinysynth](https://g200kg.github.io/webaudio-tinysynth/)
 * [Understanding The Web Audio Clock](https://sonoport.github.io/web-audio-clock.html)
+* [akx/tlfe-soundthing](https://github.com/akx/tlfe-soundthing)
+* [akx's Web Audio demos](https://akx.github.io/)
 
 ### Concepts
 
