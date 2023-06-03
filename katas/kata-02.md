@@ -28,23 +28,32 @@ Complete the following:
 12. Optional - Visualize oscillation in a separate window
 13. Optional - Implement a [theremin](https://en.wikipedia.org/wiki/Theremin) to allow adjusting two parameters (volume, frequence for example) of a waveform using a single control. A 2D slider is a good choice for this.
 
-## Reference
+## UI
 
 * [Nexus](https://nexus-js.github.io/ui/) - UI helpers for audio interfaces
 * [classList API](https://developer.mozilla.org/en-US/docs/Web/API/Element/classList)
 * [HTML range input](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/range)
 * [UTF media control symbols](https://en.wikipedia.org/wiki/Media_control_symbols)
 * [HTML button element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button)
+
+## Web Audio
+
 * [OscillatorNode](https://developer.mozilla.org/en-US/docs/Web/API/OscillatorNode)
 * [Oscillator examples](https://codepen.io/jonoliver/pen/NoawPv)
 * [Web Audio API reference at MDN](https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API)
 * [Using the Web Audio API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
 * [Web Audio API: Why Compose When You Can Code?](https://www.toptal.com/web/web-audio-api-tutorial)
-* [Get started making sounds](https://learningsynths.ableton.com/)
-* [How synths make sound?](https://learningsynths.ableton.com/en/oscillators/how-synths-make-sound)
 * [Introduction to the Web Audio API at ui.dev](https://ui.dev/web-audio-api)
-* [How to make chiptunes](https://soundation.com/music-genres/how-to-make-chiptunes)
-* [Ultimate Introduction to Chiptune Programs Part 1: General Tools (video)](https://www.youtube.com/watch?v=WNxw8OzUwfg)
-* [Fourier transform (wikipedia)](https://en.wikipedia.org/wiki/Fourier_transform)
 * [Web Audio related libraries on GitHub](https://github.com/topics/webaudio-api?l=javascript)
 * [Web Audio Synthesis & Visualization](https://frontendmasters.com/courses/web-audio/) - Paid course
+
+## Theory
+
+* [Get started making sounds](https://learningsynths.ableton.com/)
+* [How synths make sound?](https://learningsynths.ableton.com/en/oscillators/how-synths-make-sound)
+* [How to make chiptunes](https://soundation.com/music-genres/how-to-make-chiptunes)
+* [Fourier transform (wikipedia)](https://en.wikipedia.org/wiki/Fourier_transform)
+
+## Videos
+
+* [Ultimate Introduction to Chiptune Programs Part 1: General Tools (video)](https://www.youtube.com/watch?v=WNxw8OzUwfg)

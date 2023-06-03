@@ -19,16 +19,22 @@ Complete the following:
 3. Optional - Add an audio visualizer window to show the current waveform
 4. Optional - Figure out where the standard 44100 Hz sampling frequency comes from and what the implications of this limit for signal processing
 
-## Reference
+## Web Audio
 
 * [Loading sound (MDN)](https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API#loading_sound)
-* [Sample rates and audio sampling: a guide for beginners](https://www.adobe.com/uk/creativecloud/video/discover/audio-sampling.html)
 * [High-resolution real-time spectrum analyzer and music player using Web Audio and Canvas APIs](https://github.com/hvianna/audioMotion.js)
-* [Getting started with Web Audio API](https://web.dev/webaudio-intro/)
+* [Getting started with Web Audio API](https://web.dev/webaudio-intro/) - Note that this uses an outdated, Chrome-specific API so you have to doublecheck the API calls (`start` instead of `noteOn` etc.)!
+
+## Concepts
+
+* [Sample rates and audio sampling: a guide for beginners](https://www.adobe.com/uk/creativecloud/video/discover/audio-sampling.html)
 * [Every noise at once](https://everynoise.com/)
 * [Ishkur's guide to music](http://music.ishkur.com/)
 * [Nyquist frequency](https://en.wikipedia.org/wiki/Nyquist_frequency)
 * [Foley (wikipedia)](https://en.wikipedia.org/wiki/Foley_(filmmaking))
+
+## Documentaries
+
 * [May the 4th be with you, in a new documentary on the sounds of Skywalker](https://cdm.link/2022/05/may-the-4th-be-with-you-in-a-new-documentary-on-the-sounds-of-skywalker/)
 * [Behind the Mac: Skywalker Sound | Apple (video)](https://www.youtube.com/watch?v=E99Et5mzxv0)
-* [Why Does Tears Of The Kingdom Sound So Good?](https://www.youtube.com/watch?v=toEdi_wjTGM) - good intro to tonality
+* [Why Does Tears Of The Kingdom Sound So Good?](https://www.youtube.com/watch?v=toEdi_wjTGM) - Good intro to tonality
