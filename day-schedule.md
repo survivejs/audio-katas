@@ -7,10 +7,10 @@
 * 10:45-11:00 - Review kata 2
 * 11:00-11:45 - Kata 3 - Musical keyboard
 * 11:45-12:00 - Review kata 3
-* 12:00-13:00 - Lunch
+* **12:00-13:00 - Lunch**
 * 13:00-13:45 - Kata 4 - Audio sampling
 * 13:45-14:00 - Review kata 4
-* 14:00-14:30 - Coffee break
+* **14:00-14:30 - Coffee break**
 * 14:30-15:15 - Kata 5 - Music sequencing
 * 15:15-15:30 - Review kata 5
 * 15:30-16:15 - Kata 6 - Audio worklets
