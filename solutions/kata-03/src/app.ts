@@ -1,44 +1,23 @@
-import { Note, Scale } from "tonal";
-import { createWindow } from "../../utils/window";
+import { produce } from "immer";
+import { init as initDebugWindow } from "./windows/debug";
+import { init as initKeyboard } from "./windows/keyboard";
+import { init as initOscillator } from "./windows/oscillator";
+import { updateStateListeners } from "../../utils/state";
 
 console.log("hello daw");
 
-const $body = document.body;
-const initialState: {
+type ApplicationState = {
   playbackState: "paused" | "playing";
   volume: number;
   frequency: number;
-} = {
+};
+
+const $body = document.body;
+let applicationState: ApplicationState = {
   playbackState: "paused",
   volume: 0, // [0, 100]
   frequency: 440,
 };
-
-let previousVolume = initialState.volume / 100;
-const applicationState = new Proxy(initialState, {
-  set(obj, prop, value) {
-    updateListeners(String(prop), value);
-
-    if (prop === "playbackState") {
-      if (value === "paused") {
-        previousVolume = gainNode.gain.value;
-        gainNode.gain.value = 0;
-      }
-      if (value === "playing") {
-        audioContext.resume();
-        gainNode.gain.value = previousVolume;
-      }
-    }
-    if (prop === "volume") {
-      gainNode.gain.value = value / 100;
-    }
-    if (prop === "frequency") {
-      oscillator.frequency.value = value;
-    }
-
-    return Reflect.set(obj, prop, value);
-  },
-});
 
 // Create audio graph
 const audioContext = new AudioContext();
@@ -57,138 +36,56 @@ gainNode.connect(audioContext.destination);
 // This can be run only once!
 oscillator.start();
 
-createWindow({
-  $parent: $body,
-  klass: "left-1/2",
-  title: "Debug",
-  body: [
-    { type: "div", children: "", attributes: { "data-playbackState": "" } },
-    { type: "div", children: "", attributes: { "data-volume": "" } },
-    { type: "div", children: "", attributes: { "data-frequency": "" } },
-  ],
-});
-
-createWindow({
-  $parent: $body,
-  klass: "left-2/3",
-  title: "Keyboard",
-  body: [
-    {
-      type: "ul",
-      class: "flex flex-row",
-      children: Scale.get("C major").notes.map((key) => ({
-        type: "li",
-        class:
-          "border drop-shadow-md px-4 py-16 hover:cursor-pointer active:bg-slate-50",
-        children: key, // "&nbsp;",
-        attributes: {
-          "data-key": key,
-          onclick() {
-            const key = this.dataset.key;
-
-            // Pick from the fourth octave
-            const frequency = Note.freq(key + 4);
-
-            if (typeof frequency === "number") {
-              applicationState.frequency = frequency;
-            }
-          },
-        },
-      })),
-    },
-  ],
-});
-
-createWindow({
-  $parent: $body,
-  klass: "left-5",
-  title: "Playback",
-  // https://en.wikipedia.org/wiki/Media_control_symbols
-  body: [
-    {
-      type: "div",
-      class: "flex flex-col gap-2",
-      children: [
-        {
-          type: "div",
-          class: "flex flex-row gap-2",
-          children: [
-            {
-              type: "button",
-              children: "⏵",
-              attributes: {
-                onclick() {
-                  applicationState.playbackState = "playing";
-                },
-              },
-            },
-            {
-              type: "button",
-              children: "⏸",
-              attributes: {
-                onclick() {
-                  applicationState.playbackState = "paused";
-                },
-              },
-            },
-          ],
-        },
-        {
-          type: "label",
-          class: "flex flex-row gap-2",
-          children: [
-            {
-              type: "span",
-              children: "Volume",
-            },
-            {
-              type: "input",
-              attributes: {
-                type: "range",
-                name: "volume",
-                min: "0",
-                max: "100",
-                value: String(applicationState.volume),
-                oninput() {
-                  applicationState.volume = this.value;
-                },
-              },
-            },
-          ],
-        },
-        {
-          type: "label",
-          class: "flex flex-row gap-2",
-          children: [
-            {
-              type: "span",
-              children: "Frequency",
-            },
-            {
-              type: "input",
-              attributes: {
-                type: "range",
-                name: "volume",
-                min: "0",
-                max: "3000",
-                value: String(applicationState.frequency),
-                oninput() {
-                  applicationState.frequency = this.value;
-                },
-              },
-            },
-          ],
-        },
-      ],
-    },
-  ],
-});
+initDebugWindow($body, sendMessage);
+initKeyboard($body, sendMessage);
+initOscillator($body, sendMessage);
 
 // Make initial state visible in the UI
-Object.entries(initialState).map(([k, v]) => updateListeners(k, v));
+Object.entries(applicationState).map(([k, v]) => updateStateListeners(k, v));
 
-function updateListeners(prop: string, value: number | string) {
-  const $listeners = document.querySelectorAll(`[data-${String(prop)}]`);
+// State management
+let previousVolume = applicationState.volume / 100;
+function sendMessage(type, prop, payload) {
+  switch (type) {
+    case "get":
+      return applicationState[prop];
+    case "set":
+      switch (prop) {
+        case "playbackState":
+          applicationState = produce(applicationState, (draft) => {
+            draft.playbackState = payload;
+          });
 
-  $listeners.forEach(($listener) => ($listener.innerHTML = String(value)));
+          if (payload === "paused") {
+            previousVolume = gainNode.gain.value;
+            gainNode.gain.value = 0;
+          }
+          if (payload === "playing") {
+            audioContext.resume();
+            gainNode.gain.value = previousVolume;
+          }
+          break;
+        case "volume":
+          applicationState = produce(applicationState, (draft) => {
+            draft.volume = payload;
+          });
+
+          gainNode.gain.value = payload / 100;
+          break;
+        case "frequency":
+          applicationState = produce(applicationState, (draft) => {
+            draft.frequency = payload;
+          });
+
+          oscillator.frequency.value = payload;
+          break;
+        default:
+          break;
+      }
+
+      updateStateListeners(prop, payload);
+      break;
+    default:
+      break;
+  }
 }

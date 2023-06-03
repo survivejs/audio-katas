@@ -17,6 +17,7 @@
     "tailwindcss": "^3.3.2"
   },
   "dependencies": {
+    "immer": "^10.0.2",
     "tonal": "^4.14.1"
   }
 }
