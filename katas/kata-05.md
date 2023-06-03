@@ -38,6 +38,7 @@ Complete the following:
 
 * [Beat and tempo explained](https://learningmusic.ableton.com/make-beats/beat-and-tempo.html)
 * [Music tracker (wikipedia)](https://en.wikipedia.org/wiki/Music_tracker)
+* [Classic drum patterns](https://docs.google.com/spreadsheets/d/19_3BxUMy3uy1Gb0V8Wc-TcG7q16Amfn6e8QVw4-HuD0/edit#gid=0)
 
 ### Programs
 
@@ -57,6 +58,7 @@ Complete the following:
 * [I Dream of Wires](https://www.imdb.com/title/tt3636334/)
 * [Sisters with Transistors](https://www.imdb.com/title/tt6744250/)
 * [Subharcord](https://www.imdb.com/title/tt19244906/)
+* [808](https://en.wikipedia.org/wiki/808_(film))
 
 ### Songs
 
@@ -72,3 +74,12 @@ Complete the following:
 * [Jan Hammer](https://en.m.wikipedia.org/wiki/Jan_Hammer)
 * [Herbie Hancock](https://en.m.wikipedia.org/wiki/Herbie_Hancock)
 * [Skaven](https://www.mikseri.net/artists/skaven.33783.php?displ_lang=en)
+
+### Educators
+
+* [Fanu](https://www.youtube.com/@fanusamurai)
+* [Accurate Beats](https://www.youtube.com/@AccurateBeats)
+* [Point Blank](https://www.youtube.com/channel/UCIWNozFjO8yVdJFsGKVmPgg)
+* [Andrew Huang](https://www.youtube.com/@andrewhuang)
+* [Ned Rush](https://www.youtube.com/channel/UCIbbeIvZgBiXikUJaYWXTcQ)
+* [Stranjah](https://www.youtube.com/@STRANJAH)
