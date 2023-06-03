@@ -1,13 +1,14 @@
+import { produce } from "immer";
 import { kick, snare } from "@teropa/drumkit";
 import { init as initDebugWindow } from "./windows/debug";
 import { init as initKeyboard } from "./windows/keyboard";
 import { init as initOscillator } from "./windows/oscillator";
 import { init as initSampler } from "./windows/sampler";
+import { updateStateListeners } from "../../utils/state";
 
 console.log("hello daw");
 
-const $body = document.body;
-const initialState: {
+type ApplicationState = {
   playbackState: "paused" | "playing";
   volume: number;
   frequency: number;
@@ -16,7 +17,10 @@ const initialState: {
     kick: AudioBuffer | null;
     snare: AudioBuffer | null;
   };
-} = {
+};
+
+const $body = document.body;
+let applicationState: ApplicationState = {
   playbackState: "paused",
   volume: 0, // [0, 100]
   frequency: 440,
@@ -25,32 +29,6 @@ const initialState: {
     snare: null,
   },
 };
-
-let previousVolume = initialState.volume / 100;
-const applicationState = new Proxy(initialState, {
-  set(obj, prop, value) {
-    updateListeners(String(prop), value);
-
-    if (prop === "playbackState") {
-      if (value === "paused") {
-        previousVolume = gainNode.gain.value;
-        gainNode.gain.value = 0;
-      }
-      if (value === "playing") {
-        audioContext.resume();
-        gainNode.gain.value = previousVolume;
-      }
-    }
-    if (prop === "volume") {
-      gainNode.gain.value = value / 100;
-    }
-    if (prop === "frequency") {
-      oscillator.frequency.value = value;
-    }
-
-    return Reflect.set(obj, prop, value);
-  },
-});
 
 // Create audio graph
 // TODO: Check https://stackoverflow.com/a/76175156/228885
@@ -75,18 +53,59 @@ oscillator.start();
 
 loadSamples(audioContext);
 
-initDebugWindow($body, applicationState);
-initKeyboard($body, applicationState);
-initOscillator($body, applicationState);
-initSampler($body, applicationState, audioContext);
+initDebugWindow($body, sendMessage);
+initKeyboard($body, sendMessage);
+initOscillator($body, sendMessage);
+initSampler($body, sendMessage, audioContext);
 
 // Make initial state visible in the UI
-Object.entries(initialState).map(([k, v]) => updateListeners(k, v));
+Object.entries(applicationState).map(([k, v]) => updateStateListeners(k, v));
 
-function updateListeners(prop: string, value: unknown) {
-  const $listeners = document.querySelectorAll(`[data-${String(prop)}]`);
+// State management
+let previousVolume = applicationState.volume / 100;
+function sendMessage(type, prop, payload) {
+  switch (type) {
+    case "get":
+      return applicationState[prop];
+    case "set":
+      switch (prop) {
+        case "playbackState":
+          applicationState = produce(applicationState, (draft) => {
+            draft.playbackState = payload;
+          });
 
-  $listeners.forEach(($listener) => ($listener.innerHTML = String(value)));
+          if (payload === "paused") {
+            previousVolume = gainNode.gain.value;
+            gainNode.gain.value = 0;
+          }
+          if (payload === "playing") {
+            audioContext.resume();
+            gainNode.gain.value = previousVolume;
+          }
+          break;
+        case "volume":
+          applicationState = produce(applicationState, (draft) => {
+            draft.volume = payload;
+          });
+
+          gainNode.gain.value = payload / 100;
+          break;
+        case "frequency":
+          applicationState = produce(applicationState, (draft) => {
+            draft.frequency = payload;
+          });
+
+          oscillator.frequency.value = payload;
+          break;
+        default:
+          break;
+      }
+
+      updateStateListeners(prop, payload);
+      break;
+    default:
+      break;
+  }
 }
 
 async function loadSamples(audioContext: AudioContext) {
