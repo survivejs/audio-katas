@@ -30,6 +30,7 @@ Complete the following:
 * [WASM SYNTH, or, how music taught me the beauty of math](https://proofinprogress.com/posts/2020-02-19/wasm-synth.html)
 * [WebularSynth](https://github.com/cantastage/webular-synth)
 * [webaudio-tinysynth](https://g200kg.github.io/webaudio-tinysynth/)
+* [Understanding The Web Audio Clock](https://sonoport.github.io/web-audio-clock.html)
 
 ### Concepts
 
