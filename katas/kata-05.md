@@ -30,6 +30,7 @@ Complete the following:
 * [iO-808](https://io808.com/)
 * [The Mini Moog Factory](https://www.moogmusic.com/news/celebrate-our-70th-anniversary-and-bobs-birthday-new-virtual-experience)
 * [Using IIR Filters](https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Using_IIR_filters)
+* [Beat and tempo explained]https://learningmusic.ableton.com/make-beats/beat-and-tempo.html()
 * [Music tracker (wikipedia)](https://en.wikipedia.org/wiki/Music_tracker)
 * [Web audio spatialization basics](https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Web_audio_spatialization_basics)
 * [GarageBand](https://www.apple.com/mac/garageband/)
