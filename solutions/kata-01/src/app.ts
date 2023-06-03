@@ -1,5 +1,5 @@
 import { produce } from "immer";
-import { plugin as debugPlugin } from "./windows/debug";
+import { plugin as debugPlugin } from "./plugins/debug";
 import { updateStateListeners } from "../../utils/state";
 
 console.log("hello daw");
