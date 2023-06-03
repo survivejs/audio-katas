@@ -1,91 +1,22 @@
-import { produce } from "immer";
-import { init as initDebugWindow } from "./plugins/debug";
-import { init as initKeyboardWindow } from "./plugins/keyboard";
-import { init as initOscillatorWindow } from "./plugins/oscillator";
+import { plugin as debugPlugin } from "./plugins/debug";
+import { plugin as keyboardPlugin } from "./plugins/keyboard";
+import { plugin as oscillatorPlugin } from "./plugins/oscillator";
 import { updateStateListeners } from "../../utils/state";
 
 console.log("hello daw");
 
-type ApplicationState = {
-  playbackState: "paused" | "playing";
-  volume: number;
-  frequency: number;
-};
-
 const $body = document.body;
-let applicationState: ApplicationState = {
-  playbackState: "paused",
-  volume: 0, // [0, 100]
-  frequency: 440,
-};
-
-// Create audio graph
 const audioContext = new AudioContext();
 
-const oscillator = audioContext.createOscillator();
-oscillator.type = "sine";
-oscillator.frequency.value = applicationState.frequency;
+const onMessageCallbacks = [
+  debugPlugin.init({ audioContext, $parent: $body, send: sendMessage }),
+  keyboardPlugin.init({ audioContext, $parent: $body, send: sendMessage }),
+  oscillatorPlugin.init({ audioContext, $parent: $body, send: sendMessage }),
+]
+  .map((o) => o?.onMessage)
+  .flatMap((a) => (typeof a !== "undefined" ? a : []));
 
-// Volume
-const gainNode = audioContext.createGain();
-gainNode.gain.value = applicationState.volume / 100;
-
-oscillator.connect(gainNode);
-gainNode.connect(audioContext.destination);
-
-// This can be run only once!
-oscillator.start();
-
-initDebugWindow($body, sendMessage);
-initKeyboardWindow($body, sendMessage);
-initOscillatorWindow($body, sendMessage);
-
-// Make initial state visible in the UI
-Object.entries(applicationState).map(([k, v]) => updateStateListeners(k, v));
-
-// State management
-let previousVolume = applicationState.volume / 100;
 function sendMessage(type, prop, payload) {
-  switch (type) {
-    case "get":
-      return applicationState[prop];
-    case "set":
-      switch (prop) {
-        case "playbackState":
-          applicationState = produce(applicationState, (draft) => {
-            draft.playbackState = payload;
-          });
-
-          if (payload === "paused") {
-            previousVolume = gainNode.gain.value;
-            gainNode.gain.value = 0;
-          }
-          if (payload === "playing") {
-            audioContext.resume();
-            gainNode.gain.value = previousVolume;
-          }
-          break;
-        case "volume":
-          applicationState = produce(applicationState, (draft) => {
-            draft.volume = payload;
-          });
-
-          gainNode.gain.value = payload / 100;
-          break;
-        case "frequency":
-          applicationState = produce(applicationState, (draft) => {
-            draft.frequency = payload;
-          });
-
-          oscillator.frequency.value = payload;
-          break;
-        default:
-          break;
-      }
-
-      updateStateListeners(prop, payload);
-      break;
-    default:
-      break;
-  }
+  onMessageCallbacks.forEach((cb) => cb(type, prop, payload));
+  updateStateListeners(prop, payload);
 }
