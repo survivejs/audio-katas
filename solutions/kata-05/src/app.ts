@@ -2,10 +2,10 @@ import { produce } from "immer";
 import { Note, Scale } from "tonal";
 import { kick, snare } from "@teropa/drumkit";
 import { init as initDebugWindow } from "./windows/debug";
-import { init as initKeyboard } from "./windows/keyboard";
-import { init as initOscillator } from "./windows/oscillator";
-import { init as initSampler } from "./windows/sampler";
-import { init as initSequencer } from "./windows/sequencer";
+import { init as initKeyboardWindow } from "./windows/keyboard";
+import { init as initOscillatorWindow } from "./windows/oscillator";
+import { init as initSamplerWindow } from "./windows/sampler";
+import { init as initSequencerWindow } from "./windows/sequencer";
 import { loadSample } from "../../utils/audio";
 import { updateStateListeners } from "../../utils/state";
 
@@ -68,10 +68,10 @@ loadSamples(audioContext);
 
 // Initialize windows
 initDebugWindow($body, sendMessage);
-initKeyboard($body, sendMessage);
-initOscillator($body, sendMessage);
-initSampler($body, sendMessage, audioContext);
-initSequencer($body, sendMessage);
+initKeyboardWindow($body, sendMessage);
+initOscillatorWindow($body, sendMessage);
+initSamplerWindow($body, sendMessage, audioContext);
+initSequencerWindow($body, sendMessage);
 
 // Make initial state visible in the UI
 Object.entries(applicationState).map(([k, v]) => updateStateListeners(k, v));

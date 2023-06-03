@@ -1,6 +1,6 @@
 import { produce } from "immer";
 import { init as initDebugWindow } from "./windows/debug";
-import { init as initOscillator } from "./windows/oscillator";
+import { init as initOscillatorWindow } from "./windows/oscillator";
 import { updateStateListeners } from "../../utils/state";
 
 console.log("hello daw");
@@ -36,7 +36,7 @@ gainNode.connect(audioContext.destination);
 oscillator.start();
 
 initDebugWindow($body, sendMessage);
-initOscillator($body, sendMessage);
+initOscillatorWindow($body, sendMessage);
 
 // Make initial state visible in the UI
 Object.entries(applicationState).map(([k, v]) => updateStateListeners(k, v));

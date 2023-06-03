@@ -1,9 +1,9 @@
 import { produce } from "immer";
 import { kick, snare } from "@teropa/drumkit";
 import { init as initDebugWindow } from "./windows/debug";
-import { init as initKeyboard } from "./windows/keyboard";
-import { init as initOscillator } from "./windows/oscillator";
-import { init as initSampler } from "./windows/sampler";
+import { init as initKeyboardWindow } from "./windows/keyboard";
+import { init as initOscillatorWindow } from "./windows/oscillator";
+import { init as initSamplerWindow } from "./windows/sampler";
 import { updateStateListeners } from "../../utils/state";
 
 console.log("hello daw");
@@ -54,9 +54,9 @@ oscillator.start();
 loadSamples(audioContext);
 
 initDebugWindow($body, sendMessage);
-initKeyboard($body, sendMessage);
-initOscillator($body, sendMessage);
-initSampler($body, sendMessage, audioContext);
+initKeyboardWindow($body, sendMessage);
+initOscillatorWindow($body, sendMessage);
+initSamplerWindow($body, sendMessage, audioContext);
 
 // Make initial state visible in the UI
 Object.entries(applicationState).map(([k, v]) => updateStateListeners(k, v));
