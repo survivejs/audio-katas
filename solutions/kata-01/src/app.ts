@@ -13,7 +13,13 @@ let applicationState: ApplicationState = {
   test: 123,
 };
 
-debugPlugin.init({ $parent: $body, send: sendMessage });
+const audioContext = new AudioContext();
+
+const onMessageCallbacks = [
+  debugPlugin.init({ audioContext, $parent: $body, send: sendMessage }),
+]
+  .map((o) => o?.onMessage)
+  .flatMap((a) => (typeof a !== "undefined" ? a : []));
 
 // Make initial state visible in the UI
 Object.entries(applicationState).map(([k, v]) => updateStateListeners(k, v));
@@ -42,4 +48,6 @@ function sendMessage(type, prop, payload) {
     default:
       break;
   }
+
+  onMessageCallbacks.forEach((cb) => cb(type, prop, payload));
 }

@@ -2,14 +2,17 @@ type Plugin = {
   init(args: PluginParameters): PluginApi | void;
 };
 
+// TODO: This should be an union of possible combinations ideally
+type Send = (type: string, prop: string, payload?: any) => void;
+
 type PluginParameters = {
+  audioContext: AudioContext;
   $parent: HTMLElement;
-  // TODO: This should be an union of possible combinations ideally
-  send: (type: string, prop: string, payload?: unknown) => number;
+  send: Send;
 };
 
 type PluginApi = {
-  onMessage?({ message }: { message: string }): void;
+  onMessage: Send;
 };
 
 export type { Plugin };
