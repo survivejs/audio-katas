@@ -1,11 +1,11 @@
 import { produce } from "immer";
 import { Note, Scale } from "tonal";
 import { kick, snare } from "@teropa/drumkit";
-import { init as initDebugWindow } from "./windows/debug";
-import { init as initKeyboardWindow } from "./windows/keyboard";
-import { init as initOscillatorWindow } from "./windows/oscillator";
-import { init as initSamplerWindow } from "./windows/sampler";
-import { init as initSequencerWindow } from "./windows/sequencer";
+import { init as initDebugWindow } from "./plugins/debug";
+import { init as initKeyboardWindow } from "./plugins/keyboard";
+import { init as initOscillatorWindow } from "./plugins/oscillator";
+import { init as initSamplerWindow } from "./plugins/sampler";
+import { init as initSequencerWindow } from "./plugins/sequencer";
 import { loadSample } from "../../utils/audio";
 import { updateStateListeners } from "../../utils/state";
 

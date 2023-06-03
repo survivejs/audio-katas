@@ -1,6 +1,6 @@
 import { produce } from "immer";
-import { init as initDebugWindow } from "./windows/debug";
-import { init as initOscillatorWindow } from "./windows/oscillator";
+import { plugin as debugPlugin } from "./plugins/debug";
+import { plugin as oscillatorPlugin } from "./plugins/oscillator";
 import { updateStateListeners } from "../../utils/state";
 
 console.log("hello daw");
@@ -35,8 +35,8 @@ gainNode.connect(audioContext.destination);
 // This can be run only once!
 oscillator.start();
 
-initDebugWindow($body, sendMessage);
-initOscillatorWindow($body, sendMessage);
+debugPlugin.init({ $parent: $body, send: sendMessage });
+oscillatorPlugin.init({ $parent: $body, send: sendMessage });
 
 // Make initial state visible in the UI
 Object.entries(applicationState).map(([k, v]) => updateStateListeners(k, v));

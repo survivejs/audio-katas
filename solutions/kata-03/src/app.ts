@@ -1,7 +1,7 @@
 import { produce } from "immer";
-import { init as initDebugWindow } from "./windows/debug";
-import { init as initKeyboardWindow } from "./windows/keyboard";
-import { init as initOscillatorWindow } from "./windows/oscillator";
+import { init as initDebugWindow } from "./plugins/debug";
+import { init as initKeyboardWindow } from "./plugins/keyboard";
+import { init as initOscillatorWindow } from "./plugins/oscillator";
 import { updateStateListeners } from "../../utils/state";
 
 console.log("hello daw");
