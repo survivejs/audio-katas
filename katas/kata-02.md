@@ -68,3 +68,4 @@ Complete the following:
 
 * [Ultimate Introduction to Chiptune Programs Part 1: General Tools (video)](https://www.youtube.com/watch?v=WNxw8OzUwfg)
 * [A brief history of synthesizers](https://www.youtube.com/watch?v=5sjreF6H_rY)
+* [FM synths in under 4 minutes](https://www.youtube.com/watch?v=vvBl3YUBUyY)

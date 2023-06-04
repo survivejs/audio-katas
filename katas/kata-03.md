@@ -34,7 +34,7 @@ Complete the following:
 
 * [tonal](https://github.com/tonaljs/tonal) - a music theory library
 
-### Reference
+### Theory
 
 * [Note frequencies listed](https://pages.mtu.edu/~suits/notefreqs.html)
 * [Notes, Scales and Modes in Music](https://deviantnoise.com/music-theory/notes-scales-modes/)
@@ -45,3 +45,7 @@ Complete the following:
 * [Making Noise with Web Audio API](https://sparkbox.com/foundry/chiptune_style_browser_generated_music_using_tone.js) - 12 min video
 * [Interactive Sound and Visuals: A Tone.js and p5.js Beginner's Guide](https://musichackspace.org/product/interactive-sound-and-visuals-a-tone-js-and-p5-js-beginners-guide/) - Paid course
 * [Getting Started With The Web MIDI API](https://www.smashingmagazine.com/2018/03/web-midi-api/)
+
+### Videos
+
+* [Piano basics 1: sound, notes and the keyboard](https://www.youtube.com/watch?v=l6ihnJFDnJA)
