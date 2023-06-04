@@ -25,6 +25,7 @@ Complete the following:
 * [Background audio processing using AudioWorklet](https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Using_AudioWorklet)
 * [Audio worklet design pattern](https://developer.chrome.com/blog/audio-worklet-design-pattern/)
 * [Code examples and resources for Audio Worklet](https://googlechromelabs.github.io/web-audio-samples/audio-worklet/)
+* [Stack Overflow - How to code an oscillator using Audioworklet?](https://stackoverflow.com/questions/57921909/how-to-code-an-oscillator-using-audioworklet)
 
 ### WASM
 

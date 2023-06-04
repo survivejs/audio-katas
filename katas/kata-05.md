@@ -35,6 +35,7 @@ Complete the following:
 * [Understanding The Web Audio Clock](https://sonoport.github.io/web-audio-clock.html)
 * [akx/tlfe-soundthing](https://github.com/akx/tlfe-soundthing)
 * [akx's Web Audio demos](https://akx.github.io/)
+* [Web Audio/MIDI Samples by Google Chrome Web Audio team](https://googlechromelabs.github.io/web-audio-samples/)
 
 ### Concepts
 
