@@ -75,8 +75,10 @@ Complete the following:
 ### Songs
 
 * [2nd Reality - Skaven - Impulse Tracker](https://www.youtube.com/watch?v=cpNGBzd2SLE)
-* [Tubular Bells](https://en.m.wikipedia.org/wiki/Tubular_Bells)
-* [Popcorn](https://en.m.wikipedia.org/wiki/Popcorn_(instrumental)) - song
+* [Tubular Bells (wikipedia)](https://en.m.wikipedia.org/wiki/Tubular_Bells)
+* [Popcorn (wikipedia)](https://en.m.wikipedia.org/wiki/Popcorn_(instrumental)) - song
+* [Relax (wikipedia)](https://en.wikipedia.org/wiki/Relax_(song))
+* [Sweet Dreams (wikipedia)](https://en.wikipedia.org/wiki/Sweet_Dreams_(Are_Made_of_This))
 
 ### Artists
 
