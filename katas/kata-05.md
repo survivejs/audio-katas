@@ -13,29 +13,35 @@ The minimal target of this kata is to understand the basic ideas behind sequenci
 
 Complete the following:
 
-1. Set up a window with a user interface that contains rows of toggleable buttons. Each row represents a series of steps and each column represents a note within the step. When the button is enabled, a note should be played. When disabled, nothing should happen. In the first phase, it is enough to support only one note per column.
-2. Optional - Support playing multiple notes per column.
-3. Optional - Allow adjusting tempo.
-4. Optional - Allow setting up multiple tracks. For example, you could associate a sequencer window to a specific instrument and allow creation of multiple sequencer windows to model the feature.
-5. Optional - Match the four oscillators of the original 8-bit Nintendo and allow composing using them
-6. Optional - Allow playback of notes and play some legendary tune (Mario, Zelda, ...) through your system. To do this, you might need to implement some form of parser depending on the notation (pun intended).
-7. Optional - Implement a drum machine. This is similar to the first task but instead of notes, each row should trigger different drum instruments and play samples.
+1. Set up a window with a simple [piano roll](https://en.wikipedia.org/wiki/Piano_roll) user interface that contains rows of toggleable buttons. Each row represents a sequence of steps and each column represents a note within the step.
+2. Write a sequencer that plays the notes that are currently activated in the piano roll. When a button is enabled, a note should be played. When disabled, nothing should happen. In the first phase, it is enough to play monophonically, supporting only one note per column.
+3. Optional - Make the sequencer [polyphonic](https://en.wikipedia.org/wiki/Polyphony), support playing multiple notes per column.
+4. Optional - Allow adjusting tempo.
+5. Optional - Allow setting up multiple tracks. For example, you could associate a sequencer window to a specific instrument and allow creation of multiple sequencer windows to model the feature.
+6. Optional - Implement a drum machine. This is similar to the first task but instead of notes, each row should trigger different drum instruments and play samples.
+7. Optional - Match the four oscillators of the original 8-bit Nintendo and allow composing using them
+8. Optional - Allow playback of notes and play some legendary tune (Mario, Zelda, ...) through your system. To do this, you might need to implement some form of parser depending on the notation (pun intended).
 
 ## Reference
 
 ### Web Audio
 
-* [Using IIR Filters](https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Using_IIR_filters)
-* [Web audio spatialization basics](https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Web_audio_spatialization_basics)
+* [Understanding The Web Audio Clock](https://sonoport.github.io/web-audio-clock.html)
+* [A Tale of Two Clocks](https://web.dev/audio-scheduling/)
 * [Advanced techniques: Creating and sequencing audio](https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Advanced_techniques)
 * [Sequencer example](https://jonoliver.codes/sequencer/)
+* [Using IIR Filters](https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Using_IIR_filters)
+* [Web audio spatialization basics](https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Web_audio_spatialization_basics)
 * [WASM SYNTH, or, how music taught me the beauty of math](https://proofinprogress.com/posts/2020-02-19/wasm-synth.html)
 * [WebularSynth](https://github.com/cantastage/webular-synth)
 * [webaudio-tinysynth](https://g200kg.github.io/webaudio-tinysynth/)
-* [Understanding The Web Audio Clock](https://sonoport.github.io/web-audio-clock.html)
 * [akx/tlfe-soundthing](https://github.com/akx/tlfe-soundthing)
 * [akx's Web Audio demos](https://akx.github.io/)
 * [Web Audio/MIDI Samples by Google Chrome Web Audio team](https://googlechromelabs.github.io/web-audio-samples/)
+
+### Libraries
+
+* [Tone.js](https://tonejs.github.io/)
 
 ### Concepts
 
@@ -70,7 +76,7 @@ Complete the following:
 * [I Dream of Wires](https://www.imdb.com/title/tt3636334/)
 * [Sisters with Transistors](https://www.imdb.com/title/tt6744250/)
 * [Subharcord](https://www.imdb.com/title/tt19244906/)
-* [808](https://en.wikipedia.org/wiki/808_(film))
+* [808: The Film](https://en.wikipedia.org/wiki/808_(film))
 
 ### Songs
 

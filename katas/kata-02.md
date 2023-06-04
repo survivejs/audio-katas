@@ -18,15 +18,16 @@ Complete the following:
 2. Attach a Web Audio based sine wave oscillator to the controls so that it plays when you click start and stops when you click stop
 3. Add a volume control
 4. Add a control for adjusting oscillator frequency
-5. Optional - Set up a random noise generator
-6. Optional - Allow mixing between oscillator and random noise
-7. Optional - Add a way to select between a couple of different waveform types
-8. Optional - Add a control that lets the use to change the oscillator type (not just sine)
-9. Optional - Add a window for displaying and debugging application state
-10. Optional - Add a way to save oscillators
-11. Optional - Add a way to duplicate oscillators and play multiple at once
-12. Optional - Visualize oscillation in a separate window
-13. Optional - Implement a [theremin](https://en.wikipedia.org/wiki/Theremin) to allow adjusting two parameters (volume, frequence for example) of a waveform using a single control. A 2D slider is a good choice for this.
+5. Allow adjusting the volume in [decibels](https://en.wikipedia.org/wiki/DBFS)
+6. Optional - Add a control that lets the use to change the oscillator type (not just sine)
+7. Optional - Make the frequency of the oscillator slowly change over time (Hint: make another oscillator and connect itto your oscillator's frequency)
+8. Optional - Set up a random noise generator
+9. Optional - Allow mixing between oscillator and random noise
+10. Optional - Add a window for displaying and debugging application state
+11. Optional - Add a way to save oscillators
+12. Optional - Add a way to duplicate oscillators and play multiple at once
+13. Optional - Visualize oscillation in a separate window
+14. Optional - Implement a [theremin](https://en.wikipedia.org/wiki/Theremin) to allow adjusting two parameters (volume, frequence for example) of a waveform using a single control. A 2D slider is a good choice for this.
 
 ## Reference
 
