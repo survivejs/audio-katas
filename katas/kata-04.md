@@ -1,6 +1,6 @@
 # Kata 4 - Audio sampling
 
-The purpose of this kata is to understand the concept of [sampling](https://en.wikipedia.org/wiki/Sampling_(signal_processing)) and why it matters for audio processing.
+The purpose of this kata is to understand the use of [sampling](<https://en.wikipedia.org/wiki/Sampling_(music)>) in music production and learn how to do sample playback in Web Audio.
 
 ## Learning aims
 
@@ -15,9 +15,12 @@ The minimal target of this kata is to get acquainted with the concept of samplin
 Complete the following:
 
 1. Set up a window where to load custom, sampled instruments
-2. Define several custom instruments using samples. Piano and different types of drums (see [@teropa/drumkit](https://www.npmjs.com/package/@teropa/drumkit)) are good examples. You could also try to introduce [Amen break](https://en.wikipedia.org/wiki/Amen_break).
-3. Optional - Add an audio visualizer window to show the current waveform
-4. Optional - Figure out where the standard 44100 Hz sampling frequency comes from and what the implications of this limit for signal processing
+2. Define several custom instruments using samples. Piano and different types of drums (see [@teropa/drumkit](https://www.npmjs.com/package/@teropa/drumkit)) are good examples. You can find free-to-use samples on places like [freesound.org](https://freesound.org/).
+3. Optional - Make the samples play at different pitches (i.e., notes) by changing the playback rate.
+4. Optional - Load a and play a looping sample such as the [Amen break](https://en.wikipedia.org/wiki/Amen_break).
+5. Optional - Refactor your code to use a Tone.js Sampler
+6. Optional - Add an audio visualizer window to show the current waveform
+7. Optional - Figure out where the standard 44100 Hz and 48000 Hz sampling frequencies come from and what the implications of this limit for signal processing
 
 ## Reference
 

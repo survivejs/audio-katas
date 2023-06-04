@@ -32,6 +32,11 @@ Complete the following:
 * [WASM synth for Web Audio](https://github.com/a-cordier/wasm-audio)
 * [Wasm Audio Worklets API](https://emscripten.org/docs/api_reference/wasm_audio_worklets.html)
 * [WASM audio worklet](https://rustwasm.github.io/wasm-bindgen/examples/wasm-audio-worklet.html)
+* [WebAssembly Music](https://www.youtube.com/watch?v=C8j_ieOm4vE)
+
+### DSP Code
+
+* [musicdsp.org](https://www.musicdsp.org/en/latest/) - code snippets (in C) for common DSP tasks
 
 ### Filters
 
