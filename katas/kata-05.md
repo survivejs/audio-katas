@@ -41,6 +41,7 @@ Complete the following:
 * [Beat and tempo explained](https://learningmusic.ableton.com/make-beats/beat-and-tempo.html)
 * [Music tracker (wikipedia)](https://en.wikipedia.org/wiki/Music_tracker)
 * [Classic drum patterns](https://docs.google.com/spreadsheets/d/19_3BxUMy3uy1Gb0V8Wc-TcG7q16Amfn6e8QVw4-HuD0/edit#gid=0)
+* [Instructions on how to write music](https://medium.com/@danielmckemie/instructions-on-how-to-write-music-piece-1-3cb01bda3428)
 
 ### Programs
 
@@ -48,12 +49,20 @@ Complete the following:
 * [iO-808](https://io808.com/)
 * [The Mini Moog Factory](https://www.moogmusic.com/news/celebrate-our-70th-anniversary-and-bobs-birthday-new-virtual-experience)
 * [GarageBand](https://www.apple.com/mac/garageband/)
+* [SuperCollider](https://supercollider.github.io/)
+* [VCV Rack - The Eurorack simulator](https://vcvrack.com/)
+* [Native Instruments](https://en.wikipedia.org/wiki/Native_Instruments)
+* [Online synths](https://synth.playtronica.com/)
 
 ### Game audio libraries
 
 * [iMUSE](https://en.wikipedia.org/wiki/IMUSE)
 * [fmod](https://www.fmod.com/)
 * [wwise](https://en.wikipedia.org/wiki/Audiokinetic_Wwise)
+
+### Synthesizers
+
+* [Yamaha DX7 (wikipedia)](https://en.wikipedia.org/wiki/Yamaha_DX7)
 
 ### Documentaries
 
@@ -85,3 +94,7 @@ Complete the following:
 * [Andrew Huang](https://www.youtube.com/@andrewhuang)
 * [Ned Rush](https://www.youtube.com/channel/UCIbbeIvZgBiXikUJaYWXTcQ)
 * [Stranjah](https://www.youtube.com/@STRANJAH)
+
+### Videos
+
+* [Drum Machine 101 Ep. 1 - First Steps | How to program your first beat on any drum machine](https://www.youtube.com/watch?v=eq_DGafM-4s) - Also episodes 2 and 3.

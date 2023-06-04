@@ -27,6 +27,11 @@ Complete the following:
 * [High-resolution real-time spectrum analyzer and music player using Web Audio and Canvas APIs](https://github.com/hvianna/audioMotion.js)
 * [Getting started with Web Audio API](https://web.dev/webaudio-intro/) - Note that this uses an outdated, Chrome-specific API so you have to doublecheck the API calls (`start` instead of `noteOn` etc.)!
 
+## Samples
+
+* [@teropa/drumkit](https://www.npmjs.com/package/@teropa/drumkit)
+* [SampleRadar: 204 free percussion samples](https://www.musicradar.com/news/tech/sampleradar-204-free-percussion-samples-523942)
+
 ### Concepts
 
 * [Sample rates and audio sampling: a guide for beginners](https://www.adobe.com/uk/creativecloud/video/discover/audio-sampling.html)
@@ -34,6 +39,8 @@ Complete the following:
 * [Ishkur's guide to music](http://music.ishkur.com/)
 * [Nyquist frequency](https://en.wikipedia.org/wiki/Nyquist_frequency)
 * [Foley (wikipedia)](https://en.wikipedia.org/wiki/Foley_(filmmaking))
+* [How Music Affects Your Productivity](https://www.entrepreneur.com/living/how-music-affects-your-productivity/235654)
+* [Why do people love electronic music?](https://www.arc.unsw.edu.au/blitz/read/why-do-people-love-electronic-music)
 
 ### Documentaries
 

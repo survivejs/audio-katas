@@ -48,6 +48,8 @@ Complete the following:
 * [Introduction to the Web Audio API at ui.dev](https://ui.dev/web-audio-api)
 * [Web Audio related libraries on GitHub](https://github.com/topics/webaudio-api?l=javascript)
 * [Web Audio Synthesis & Visualization](https://frontendmasters.com/courses/web-audio/) - Paid course
+* [A Different Introduction to the Web Audio API](https://medium.com/@danielmckemie/tips-and-techniques-for-using-the-web-audio-api-89b8beda6cf2) - Great visual explanations
+* [Exploring FM synthesis](https://observablehq.com/@ramonaisonline/synthesis)
 
 ### Theory
 
@@ -55,7 +57,14 @@ Complete the following:
 * [How synths make sound?](https://learningsynths.ableton.com/en/oscillators/how-synths-make-sound)
 * [How to make chiptunes](https://soundation.com/music-genres/how-to-make-chiptunes)
 * [Fourier transform (wikipedia)](https://en.wikipedia.org/wiki/Fourier_transform)
+* [What is FM synthesis? The ultimate beginner's guide](https://www.musicradar.com/news/what-is-fm-synthesis)
+* [Polyphony and monophony in instruments (wikipedia)](https://en.wikipedia.org/wiki/Polyphony_and_monophony_in_instruments)
+
+### Songs
+
+* [Danger Zone (wikipedia)](https://en.wikipedia.org/wiki/Danger_Zone_(song))
 
 ### Videos
 
 * [Ultimate Introduction to Chiptune Programs Part 1: General Tools (video)](https://www.youtube.com/watch?v=WNxw8OzUwfg)
+* [A brief history of synthesizers](https://www.youtube.com/watch?v=5sjreF6H_rY)
