@@ -24,6 +24,7 @@ Complete the following:
 * [Enter Audio Worklet](https://developer.chrome.com/blog/audio-worklet/)
 * [Background audio processing using AudioWorklet](https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Using_AudioWorklet)
 * [Audio worklet design pattern](https://developer.chrome.com/blog/audio-worklet-design-pattern/)
+* [Code examples and resources for Audio Worklet](https://googlechromelabs.github.io/web-audio-samples/audio-worklet/)
 
 ### WASM
 
