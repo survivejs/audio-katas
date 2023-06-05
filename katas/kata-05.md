@@ -43,12 +43,14 @@ Complete the following:
 
 * [Tone.js](https://tonejs.github.io/)
 
-### Concepts
+### Theory
 
 * [Beat and tempo explained](https://learningmusic.ableton.com/make-beats/beat-and-tempo.html)
 * [Music tracker (wikipedia)](https://en.wikipedia.org/wiki/Music_tracker)
 * [Classic drum patterns](https://docs.google.com/spreadsheets/d/19_3BxUMy3uy1Gb0V8Wc-TcG7q16Amfn6e8QVw4-HuD0/edit#gid=0)
 * [Instructions on how to write music](https://medium.com/@danielmckemie/instructions-on-how-to-write-music-piece-1-3cb01bda3428)
+* [Sonata form](https://en.wikipedia.org/wiki/Sonata_form)
+* [Using Tonnetz Tone Mesh To Understand Jazz Harmony](https://jazz-library.com/articles/tonnetz/)
 
 ### Programs
 
@@ -85,6 +87,7 @@ Complete the following:
 * [Popcorn (wikipedia)](https://en.m.wikipedia.org/wiki/Popcorn_(instrumental)) - song
 * [Relax (wikipedia)](https://en.wikipedia.org/wiki/Relax_(song))
 * [Sweet Dreams (wikipedia)](https://en.wikipedia.org/wiki/Sweet_Dreams_(Are_Made_of_This))
+* [Kreuzspiel – Stockhausen](https://www.youtube.com/watch?v=tImv2Oxls58)
 
 ### Artists
 
@@ -94,6 +97,8 @@ Complete the following:
 * [Jan Hammer](https://en.m.wikipedia.org/wiki/Jan_Hammer)
 * [Herbie Hancock](https://en.m.wikipedia.org/wiki/Herbie_Hancock)
 * [Skaven](https://www.mikseri.net/artists/skaven.33783.php?displ_lang=en)
+* [Olivier Messiaen](https://en.wikipedia.org/wiki/Olivier_Messiaen)
+* [A Schenkerian analysis of the seven symphonies of Jean Sibelius](https://research.bangor.ac.uk/portal/en/theses/a-schenkerian-analysis-of-the-seven-symphonies-of-jean-sibelius(70219516-79a3-47a5-a85b-426a47fda4ee).html)
 
 ### Educators
 

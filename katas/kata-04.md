@@ -35,7 +35,7 @@ Complete the following:
 * [@teropa/drumkit](https://www.npmjs.com/package/@teropa/drumkit)
 * [SampleRadar: 204 free percussion samples](https://www.musicradar.com/news/tech/sampleradar-204-free-percussion-samples-523942)
 
-### Concepts
+### Theory
 
 * [Sample rates and audio sampling: a guide for beginners](https://www.adobe.com/uk/creativecloud/video/discover/audio-sampling.html)
 * [Every noise at once](https://everynoise.com/)
@@ -44,6 +44,7 @@ Complete the following:
 * [Foley (wikipedia)](https://en.wikipedia.org/wiki/Foley_(filmmaking))
 * [How Music Affects Your Productivity](https://www.entrepreneur.com/living/how-music-affects-your-productivity/235654)
 * [Why do people love electronic music?](https://www.arc.unsw.edu.au/blitz/read/why-do-people-love-electronic-music)
+* [Loudness war](https://en.wikipedia.org/wiki/Loudness_war)
 
 ### Documentaries
 

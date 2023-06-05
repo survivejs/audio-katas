@@ -60,6 +60,18 @@ Complete the following:
 * [Fourier transform (wikipedia)](https://en.wikipedia.org/wiki/Fourier_transform)
 * [What is FM synthesis? The ultimate beginner's guide](https://www.musicradar.com/news/what-is-fm-synthesis)
 * [Polyphony and monophony in instruments (wikipedia)](https://en.wikipedia.org/wiki/Polyphony_and_monophony_in_instruments)
+* [A Preliminary Theory of Sound Design](https://nathan.ho.name/posts/sound-design-theory/)
+
+### Instruments
+
+* [Rhythmicon](https://en.wikipedia.org/wiki/Rhythmicon)
+* [Trautonium](https://en.wikipedia.org/wiki/Trautonium)
+* [Subharmonicon](https://www.moogmusic.com/products/subharmonicon)
+* [Moog (wikipedia)](https://en.wikipedia.org/wiki/Moog_synthesizer)
+
+### Blogs
+
+* [Matrixsynth](https://www.matrixsynth.com/) - Everything synth
 
 ### Songs
 

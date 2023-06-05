@@ -42,6 +42,8 @@ Complete the following:
 * [Note frequencies listed](https://pages.mtu.edu/~suits/notefreqs.html)
 * [Formulas for converting between note values and frequencies](https://newt.phys.unsw.edu.au/jw/notes.html)
 * [Notes, Scales and Modes in Music](https://deviantnoise.com/music-theory/notes-scales-modes/)
+* [Byzantine vs Western Notation](https://stanthonysmonastery.org/pages/byzantine-vs-western-notation)
+* [Table of Byzantine notation symbols (pdf)](http://www.byzantinechant.org/notation/Table%20of%20Byzantine%20Notation%20Symbols.pdf)
 
 ### Web Audio
 
