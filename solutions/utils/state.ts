@@ -13,14 +13,7 @@ function updateStateListeners(prop: string, payload: unknown) {
     (e) => e.dataset.key === prop
   );
 
-  if (Array.isArray(payload)) {
-    // no-op: Ignore for now (sequencer init case), this needs some generic solution
-    // based on a type check.
-  } else {
-    $propMatches.forEach(
-      ($listener) => ($listener.innerHTML = String(payload))
-    );
-  }
+  $propMatches.forEach(($listener) => ($listener.innerHTML = String(payload)));
 }
 
 export { updateStateListeners };
