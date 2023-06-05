@@ -98,6 +98,7 @@ Complete the following:
 * [Herbie Hancock](https://en.m.wikipedia.org/wiki/Herbie_Hancock)
 * [Skaven](https://www.mikseri.net/artists/skaven.33783.php?displ_lang=en)
 * [Olivier Messiaen](https://en.wikipedia.org/wiki/Olivier_Messiaen)
+* [Vangelis](https://en.wikipedia.org/wiki/Vangelis)
 * [A Schenkerian analysis of the seven symphonies of Jean Sibelius](https://research.bangor.ac.uk/portal/en/theses/a-schenkerian-analysis-of-the-seven-symphonies-of-jean-sibelius(70219516-79a3-47a5-a85b-426a47fda4ee).html)
 
 ### Educators
