@@ -13,7 +13,28 @@ function updateStateListeners(prop: string, payload: unknown) {
     (e) => e.dataset.key === prop
   );
 
-  $propMatches.forEach(($listener) => ($listener.innerHTML = String(payload)));
+  if (Array.isArray(payload)) {
+    // no-op: Ignore for now (sequencer init case), this needs some generic solution
+    // based on a type check.
+  }
+  // @ts-expect-error This is fine, maybe check object in a better way, though
+  else if (payload.hasOwnProperty("x") && payload.hasOwnProperty("y")) {
+    const $xyMatch = $propMatches.filter(
+      (e) =>
+        // @ts-expect-error This is fine (wrong type after filtering)
+        e.dataset.x === String(payload.x) && e.dataset.y === String(payload.y)
+    );
+
+    // The assumption is that there is only one match
+    if ($xyMatch.length) {
+      // @ts-expect-error This is fine as the type is wrong
+      $xyMatch[0].dataset.value = payload.value.toString();
+    }
+  } else {
+    $propMatches.forEach(
+      ($listener) => ($listener.innerHTML = String(payload))
+    );
+  }
 }
 
 export { updateStateListeners };
