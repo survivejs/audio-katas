@@ -23,6 +23,7 @@ Complete the following:
 7. Optional - Adapt your keyboard to use a [tuning system](https://isartum.net/leimma) different from Western equal temperament.
 8. Optional - Look up the [MIDI](https://en.wikipedia.org/wiki/MIDI) standard and consider how you might use it to expand the system with a physical device
 9. Optional - Add a musical note renderer using a library like [VexFlow](https://www.vexflow.com/)
+10. Optional - Make it possible to play the keyboard automatically (i.e., generate notes to play)
 
 ## Reference
 

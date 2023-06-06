@@ -62,6 +62,7 @@ Complete the following:
 * [VCV Rack - The Eurorack simulator](https://vcvrack.com/)
 * [Native Instruments](https://en.wikipedia.org/wiki/Native_Instruments)
 * [Online synths](https://synth.playtronica.com/)
+* [mmontag/dx7-synth-js](https://github.com/mmontag/dx7-synth-js)
 
 ### Game audio libraries
 
