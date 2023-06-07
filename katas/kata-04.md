@@ -21,6 +21,7 @@ Complete the following:
 5. Optional - Refactor your code to use a Tone.js Sampler
 6. Optional - Add an audio visualizer window to show the current waveform
 7. Optional - Figure out where the standard 44100 Hz and 48000 Hz sampling frequencies come from and what the implications of this limit for signal processing
+8. Optional - Record user audio to use as an instrument. See [reference](https://web.dev/media-recording-audio/).
 
 ## Reference
 
