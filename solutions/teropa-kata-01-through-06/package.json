@@ -1,0 +1,27 @@
+{
+  "name": "my-daw",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "parcel src/index.html",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Juho Vepsäläinen",
+  "license": "MIT",
+  "devDependencies": {
+    "parcel": "^2.9.1",
+    "postcss": "^8.4.24",
+    "prettier": "^2.8.8",
+    "process": "^0.11.10",
+    "tailwindcss": "^3.3.2"
+  },
+  "dependencies": {
+    "@teropa/drumkit": "^1.1.0",
+    "immer": "^10.0.2",
+    "nexusui": "^2.1.6",
+    "tone": "^14.7.77",
+    "webmidi": "^3.1.6"
+  }
+}
