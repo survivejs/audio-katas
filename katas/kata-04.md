@@ -17,7 +17,7 @@ Complete the following:
 1. Set up a window where to load custom, sampled instruments
 2. Define several custom instruments using samples. Piano and different types of drums (see [@teropa/drumkit](https://www.npmjs.com/package/@teropa/drumkit)) are good examples. You can find free-to-use samples on places like [freesound.org](https://freesound.org/).
 3. Optional - Make the samples play at different pitches (i.e., notes) by changing the playback rate.
-4. Optional - Load a and play a looping sample such as the [Amen break](https://en.wikipedia.org/wiki/Amen_break).
+4. Optional - Load and play a looping sample such as the [Amen break](https://en.wikipedia.org/wiki/Amen_break).
 5. Optional - Refactor your code to use a Tone.js Sampler
 6. Optional - Add an audio visualizer window to show the current waveform
 7. Optional - Figure out where the standard 44100 Hz and 48000 Hz sampling frequencies come from and what the implications of this limit for signal processing
