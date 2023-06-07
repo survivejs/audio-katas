@@ -20,7 +20,7 @@ Complete the following:
 4. Add a control for adjusting oscillator frequency
 5. Allow adjusting the volume in [decibels](https://en.wikipedia.org/wiki/DBFS)
 6. Optional - Add a control that lets the use to change the oscillator type (not just sine)
-7. Optional - Make the frequency of the oscillator slowly change over time (Hint: make another oscillator and connect itto your oscillator's frequency)
+7. Optional - Make the frequency of the oscillator slowly change over time (Hint: make another oscillator and connect it to your oscillator's frequency)
 8. Optional - Set up a random noise generator
 9. Optional - Allow mixing between oscillator and random noise
 10. Optional - Add a window for displaying and debugging application state
