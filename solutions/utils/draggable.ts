@@ -349,18 +349,18 @@ function findPos(e: HTMLElement) {
 
 // http://javascript.about.com/library/blmousepos.htm
 function cursorX(_elem: HTMLElement, evt: MouseEvent | TouchEvent) {
-  if (evt instanceof TouchEvent) {
+  if (window.TouchEvent && evt instanceof window.TouchEvent) {
     return evt.touches.item(0)?.clientX;
   }
 
-  return evt.clientX;
+  return (evt as MouseEvent).clientX;
 }
 function cursorY(_elem: HTMLElement, evt: MouseEvent | TouchEvent) {
-  if (evt instanceof TouchEvent) {
+  if (window.TouchEvent && evt instanceof window.TouchEvent) {
     return evt.touches.item(0)?.clientY;
   }
 
-  return evt.clientY;
+  return (evt as MouseEvent).clientY;
 }
 
 function makeDraggable($draggable: HTMLElement | null) {
