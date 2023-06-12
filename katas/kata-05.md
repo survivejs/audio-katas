@@ -24,6 +24,10 @@ Complete the following:
 
 ## Reference
 
+### Parcel
+
+* [How to play local samples with Parcel](https://github.com/parcel-bundler/parcel/issues/1911)
+
 ### Web Audio
 
 * [Understanding The Web Audio Clock](https://sonoport.github.io/web-audio-clock.html)
@@ -38,6 +42,7 @@ Complete the following:
 * [akx/tlfe-soundthing](https://github.com/akx/tlfe-soundthing)
 * [akx's Web Audio demos](https://akx.github.io/)
 * [Web Audio/MIDI Samples by Google Chrome Web Audio team](https://googlechromelabs.github.io/web-audio-samples/)
+* [Visualizations with Web Audio API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Visualizations_with_Web_Audio_API)
 
 ### Libraries
 
@@ -63,6 +68,8 @@ Complete the following:
 * [Native Instruments](https://en.wikipedia.org/wiki/Native_Instruments)
 * [Online synths](https://synth.playtronica.com/)
 * [mmontag/dx7-synth-js](https://github.com/mmontag/dx7-synth-js)
+* [Global Sequencer](https://globalsequencer.com/)
+* [Amped Studio](https://ampedstudio.com/)
 
 ### Game audio libraries
 
@@ -73,6 +80,9 @@ Complete the following:
 ### Synthesizers
 
 * [Yamaha DX7 (wikipedia)](https://en.wikipedia.org/wiki/Yamaha_DX7)
+* [Roland MT-32 (wikipedia)](https://en.wikipedia.org/wiki/Roland_MT-32)
+* [Richard Devine's Eurorack setup](https://www.instagram.com/p/Csyz7vsASlV/)
+* [GROOVE systems](https://120years.net/category/name/max-matthews/)
 
 ### Documentaries
 
@@ -80,6 +90,7 @@ Complete the following:
 * [Sisters with Transistors](https://www.imdb.com/title/tt6744250/)
 * [Subharcord](https://www.imdb.com/title/tt19244906/)
 * [808: The Film](https://en.wikipedia.org/wiki/808_(film))
+* [Wendy Carlos and her Moog synthesizer](https://www.youtube.com/watch?v=UsW2EDGbDqg)
 
 ### Songs
 
@@ -89,6 +100,7 @@ Complete the following:
 * [Relax (wikipedia)](https://en.wikipedia.org/wiki/Relax_(song))
 * [Sweet Dreams (wikipedia)](https://en.wikipedia.org/wiki/Sweet_Dreams_(Are_Made_of_This))
 * [Kreuzspiel – Stockhausen](https://www.youtube.com/watch?v=tImv2Oxls58)
+* [Rituals - Venice #20](https://www.artblocks.io/collections/presents/projects/0xa7d8d9ef8d8ce8992df33d8b8cf4aebabd5bd270/172/tokens/172000020)
 
 ### Artists
 
@@ -101,6 +113,7 @@ Complete the following:
 * [Olivier Messiaen](https://en.wikipedia.org/wiki/Olivier_Messiaen)
 * [Vangelis](https://en.wikipedia.org/wiki/Vangelis)
 * [A Schenkerian analysis of the seven symphonies of Jean Sibelius](https://research.bangor.ac.uk/portal/en/theses/a-schenkerian-analysis-of-the-seven-symphonies-of-jean-sibelius(70219516-79a3-47a5-a85b-426a47fda4ee).html)
+* [Erkki Kurenniemi](https://120years.net/wordpress/dimi-helsinki-electronic-music-studioerkki-kurenniemifinland1961-2/)
 
 ### Educators
 

@@ -13,9 +13,11 @@ The minimal target of this kata is to get used to writing audio worklets and und
 
 Complete the following:
 
-1. Implement a sine oscillator using an audio worklet
-2. Optional - implement a delay effect using an audio worklet
-3. Optional - integrate a ladder filter to the system using an audio worklet
+1. Implement a random noise generator using an audio worklet
+2. Implement a sine oscillator using an audio worklet
+3. Optional - implement a delay effect using an audio worklet
+4. Optional - integrate a ladder filter to the system using an audio worklet
+5. Optional - implement a crossfade worklet to allow
 
 ## Reference
 
@@ -26,6 +28,11 @@ Complete the following:
 * [Audio worklet design pattern](https://developer.chrome.com/blog/audio-worklet-design-pattern/)
 * [Code examples and resources for Audio Worklet](https://googlechromelabs.github.io/web-audio-samples/audio-worklet/)
 * [Stack Overflow - How to code an oscillator using Audioworklet?](https://stackoverflow.com/questions/57921909/how-to-code-an-oscillator-using-audioworklet)
+
+### Theory
+
+* [Circles, sines, and signals](https://jackschaedler.github.io/circles-sines-signals/)
+* [Bitcrusher](https://en.wikipedia.org/wiki/Bitcrusher)
 
 ### WASM
 
@@ -38,6 +45,7 @@ Complete the following:
 ### DSP Code
 
 * [musicdsp.org](https://www.musicdsp.org/en/latest/) - code snippets (in C) for common DSP tasks
+* [dsp.js](https://github.com/corbanbrook/dsp.js/)
 
 ### Filters
 

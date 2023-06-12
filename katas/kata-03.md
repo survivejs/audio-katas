@@ -37,6 +37,7 @@ Complete the following:
 * [tonal](https://github.com/tonaljs/tonal) - a music theory library
 * [Tone.js](https://tonejs.github.io/) - web audio abstractions for music
 * [AudioKeys](https://github.com/kylestetz/AudioKeys) - musical note input handlers for QWERTY keyboards
+* [webmidi.js](https://webmidijs.org/)
 
 ### Theory
 
@@ -45,9 +46,11 @@ Complete the following:
 * [Notes, Scales and Modes in Music](https://deviantnoise.com/music-theory/notes-scales-modes/)
 * [Byzantine vs Western Notation](https://stanthonysmonastery.org/pages/byzantine-vs-western-notation)
 * [Table of Byzantine notation symbols (pdf)](http://www.byzantinechant.org/notation/Table%20of%20Byzantine%20Notation%20Symbols.pdf)
+* [Why is there no B or E sharp](https://soundadventurer.com/why-is-there-no-b-or-e-sharp/)
 
 ### Web Audio
 
+* [Web MIDI API](https://www.w3.org/TR/webmidi/)
 * [Recreating legendary 8-bit games music with Web Audio API](https://codepen.io/gregh/post/recreating-legendary-8-bit-games-music-with-web-audio-api)
 * [Making Noise with Web Audio API](https://sparkbox.com/foundry/chiptune_style_browser_generated_music_using_tone.js) - 12 min video
 * [Interactive Sound and Visuals: A Tone.js and p5.js Beginner's Guide](https://musichackspace.org/product/interactive-sound-and-visuals-a-tone-js-and-p5-js-beginners-guide/) - Paid course

@@ -35,6 +35,10 @@ Complete the following:
 
 * [@teropa/drumkit](https://www.npmjs.com/package/@teropa/drumkit)
 * [SampleRadar: 204 free percussion samples](https://www.musicradar.com/news/tech/sampleradar-204-free-percussion-samples-523942)
+* [Splice](https://splice.com/)
+* [ccMixter](http://ccmixter.org/)
+* [Freesound](https://freesound.org/)
+* [TR-808 samples](https://github.com/tidalcycles/Dirt-Samples/blob/master/808/TR808.TXT)
 
 ### Theory
 
@@ -51,6 +55,10 @@ Complete the following:
 
 * [May the 4th be with you, in a new documentary on the sounds of Skywalker](https://cdm.link/2022/05/may-the-4th-be-with-you-in-a-new-documentary-on-the-sounds-of-skywalker/)
 * [Behind the Mac: Skywalker Sound | Apple (video)](https://www.youtube.com/watch?v=E99Et5mzxv0)
+
+### Books
+
+* [Designing with Sound](https://www.amazon.com/Designing-Sound-Fundamentals-Products-Services/dp/1491961104)
 
 ### Videos
 

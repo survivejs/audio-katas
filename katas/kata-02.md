@@ -41,8 +41,11 @@ Complete the following:
 
 ### Web Audio
 
+* [Web Audio API specification](https://www.w3.org/TR/webaudio/)
+* [Autoplay policy in Chrome](https://developer.chrome.com/blog/autoplay/)
 * [OscillatorNode](https://developer.mozilla.org/en-US/docs/Web/API/OscillatorNode)
 * [Oscillator examples](https://codepen.io/jonoliver/pen/NoawPv)
+* [createPeriodicWave](https://developer.mozilla.org/en-US/docs/Web/API/BaseAudioContext/createPeriodicWave)
 * [Web Audio API reference at MDN](https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API)
 * [Using the Web Audio API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
 * [Web Audio API: Why Compose When You Can Code?](https://www.toptal.com/web/web-audio-api-tutorial)
@@ -51,6 +54,9 @@ Complete the following:
 * [Web Audio Synthesis & Visualization](https://frontendmasters.com/courses/web-audio/) - Paid course
 * [A Different Introduction to the Web Audio API](https://medium.com/@danielmckemie/tips-and-techniques-for-using-the-web-audio-api-89b8beda6cf2) - Great visual explanations
 * [Exploring FM synthesis](https://observablehq.com/@ramonaisonline/synthesis)
+* [Various Web Audio API examples by Josh Reiss](https://github.com/joshreiss/Working-with-the-Web-Audio-API)
+* [Using Fourier Transforms with Web Audio API](https://www.sitepoint.com/using-fourier-transforms-web-audio-api/)
+* [Profiling Web Audio apps in Chrome](https://web.dev/profiling-web-audio-apps-in-chrome/)
 
 ### Theory
 
