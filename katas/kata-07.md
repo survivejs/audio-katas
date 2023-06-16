@@ -27,7 +27,7 @@ Complete the following:
 
 ### Tools
 
-* [NoFlo](https://noflojs.org/) - [theremin example](https://app.flowhub.io/#project/6724a6eb8a1aaf351866e7a43c3ecd43/6724a6eb8a1aaf351866e7a43c3ecd43%2Fnoflo)
+* [NoFlo](https://noflojs.org/)
 * [Jeskola Buzz](http://jeskola.net/buzz/)
 * [Sonic Pi](https://sonic-pi.net/)
 * [Pure Data](https://puredata.info/)
