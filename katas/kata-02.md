@@ -26,8 +26,7 @@ Complete the following:
 10. Optional - Add a window for displaying and debugging application state
 11. Optional - Add a way to save oscillators
 12. Optional - Add a way to duplicate oscillators and play multiple at once
-13. Optional - Visualize oscillation in a separate window
-14. Optional - Implement a [theremin](https://en.wikipedia.org/wiki/Theremin) to allow adjusting two parameters (volume, frequence for example) of a waveform using a single control. A 2D slider is a good choice for this.
+13. Optional - Implement a [theremin](https://en.wikipedia.org/wiki/Theremin) to allow adjusting two parameters (volume, frequence for example) of a waveform using a single control. A 2D slider is a good choice for this.
 
 ## Reference
 
@@ -51,7 +50,6 @@ Complete the following:
 * [Web Audio API: Why Compose When You Can Code?](https://www.toptal.com/web/web-audio-api-tutorial)
 * [Introduction to the Web Audio API at ui.dev](https://ui.dev/web-audio-api)
 * [Web Audio related libraries on GitHub](https://github.com/topics/webaudio-api?l=javascript)
-* [Web Audio Synthesis & Visualization](https://frontendmasters.com/courses/web-audio/) - Paid course
 * [A Different Introduction to the Web Audio API](https://medium.com/@danielmckemie/tips-and-techniques-for-using-the-web-audio-api-89b8beda6cf2) - Great visual explanations
 * [Exploring FM synthesis](https://observablehq.com/@ramonaisonline/synthesis)
 * [Various Web Audio API examples by Josh Reiss](https://github.com/joshreiss/Working-with-the-Web-Audio-API)

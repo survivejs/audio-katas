@@ -53,7 +53,6 @@ Complete the following:
 * [Web MIDI API](https://www.w3.org/TR/webmidi/)
 * [Recreating legendary 8-bit games music with Web Audio API](https://codepen.io/gregh/post/recreating-legendary-8-bit-games-music-with-web-audio-api)
 * [Making Noise with Web Audio API](https://sparkbox.com/foundry/chiptune_style_browser_generated_music_using_tone.js) - 12 min video
-* [Interactive Sound and Visuals: A Tone.js and p5.js Beginner's Guide](https://musichackspace.org/product/interactive-sound-and-visuals-a-tone-js-and-p5-js-beginners-guide/) - Paid course
 * [Getting Started With The Web MIDI API](https://www.smashingmagazine.com/2018/03/web-midi-api/)
 
 ### Videos

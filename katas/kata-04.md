@@ -51,6 +51,13 @@ Complete the following:
 * [Why do people love electronic music?](https://www.arc.unsw.edu.au/blitz/read/why-do-people-love-electronic-music)
 * [Loudness war](https://en.wikipedia.org/wiki/Loudness_war)
 
+## Visualization
+
+* [Interactive Sound and Visuals: A Tone.js and p5.js Beginner's Guide](https://musichackspace.org/product/interactive-sound-and-visuals-a-tone-js-and-p5-js-beginners-guide/) - Paid course
+* [Web Audio Synthesis & Visualization](https://frontendmasters.com/courses/web-audio/) - Paid course
+* [Realtime Music Visualizer](https://lucid.zaps.dev/)
+* [Visualizations with Web Audio API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Visualizations_with_Web_Audio_API)
+
 ### Documentaries
 
 * [May the 4th be with you, in a new documentary on the sounds of Skywalker](https://cdm.link/2022/05/may-the-4th-be-with-you-in-a-new-documentary-on-the-sounds-of-skywalker/)
