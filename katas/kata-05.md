@@ -42,7 +42,6 @@ Complete the following:
 * [akx/tlfe-soundthing](https://github.com/akx/tlfe-soundthing)
 * [akx's Web Audio demos](https://akx.github.io/)
 * [Web Audio/MIDI Samples by Google Chrome Web Audio team](https://googlechromelabs.github.io/web-audio-samples/)
-* [Visualizations with Web Audio API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Visualizations_with_Web_Audio_API)
 
 ### Libraries
 
