@@ -2,7 +2,7 @@
 
 [Web Audio](https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API) is one of the perhaps most overlooked web APIs. Through these katas, you will get a better idea of its capabilities and will be able to go further in your own experiments with the API. Essentially we will be building a modular [Digital Audio Workstation (DAW)](https://en.wikipedia.org/wiki/Digital_audio_workstation) of our own.
 
-The repository contains [katas](katas/) and [solutions](solutions/). Each kata comes with a brief description for learning aims, background information, and a task to perform. The katas have been designed to form a continuum so make sure to start from the first one and complete them in a successive manner. Each kata is fairly simple and the goal is to teach a concept per kata to avoid overwhelming anyone.
+The repository contains [katas](katas/) and [solutions](solutions/). Each kata comes with a brief description for learning aims, background information, and specific tasks to perform. The katas have been designed to form a continuum so make sure to start from the first one and complete them in a successive manner. Each kata is fairly simple and the goal is to teach a concept per kata to avoid overwhelming anyone.
 
 ## Katas
 
