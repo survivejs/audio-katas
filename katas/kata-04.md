@@ -63,6 +63,11 @@ Complete the following:
 * [May the 4th be with you, in a new documentary on the sounds of Skywalker](https://cdm.link/2022/05/may-the-4th-be-with-you-in-a-new-documentary-on-the-sounds-of-skywalker/)
 * [Behind the Mac: Skywalker Sound | Apple (video)](https://www.youtube.com/watch?v=E99Et5mzxv0)
 
+
+### AI
+
+* [Open sourcing AudioCraft: Generative AI for audio made simple and available to all](https://ai.meta.com/blog/audiocraft-musicgen-audiogen-encodec-generative-ai-audio/)
+
 ### Books
 
 * [Designing with Sound](https://www.amazon.com/Designing-Sound-Fundamentals-Products-Services/dp/1491961104)
