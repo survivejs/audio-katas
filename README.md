@@ -22,6 +22,10 @@ To be able to complete the katas, you need the following:
 * [Node.js](https://nodejs.org/en/)
 * [Git](https://git-scm.com/) - Optional but it is a good idea to version your work so you can see what was done and why
 
+## Related resources
+
+See [notthetup/awesome-webaudio](https://github.com/notthetup/awesome-webaudio) for a collection of Web Audio related resources.
+
 ## Credits
 
 The kata format has been adapted from [red-gate/web-kata](https://github.com/red-gate/web-kata). Special thanks go to [Tero Parviainen](https://github.com/teropa) for helping to ideate the content.
