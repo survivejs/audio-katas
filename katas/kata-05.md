@@ -82,6 +82,7 @@ Complete the following:
 * [Roland MT-32 (wikipedia)](https://en.wikipedia.org/wiki/Roland_MT-32)
 * [Richard Devine's Eurorack setup](https://www.instagram.com/p/Csyz7vsASlV/)
 * [GROOVE systems](https://120years.net/category/name/max-matthews/)
+* [websid](https://www.igorski.nl/apps/websid)
 
 ### Documentaries
 
